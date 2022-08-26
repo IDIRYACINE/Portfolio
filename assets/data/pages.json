@@ -1,0 +1,72 @@
+{
+    "pages" : 3,
+    "content" : {
+        "featured" : {
+            "title" : "Post 1",
+                "image" : "images/pic05.jpg",
+                "shortDescription" : "Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "#"
+                    },
+                    {
+                        "label": "See all",
+                        "url": "#"
+                    }
+                ]
+        },
+        "page1" : [
+            {
+                "title" : "Post 1",
+                "image" : "/images/pic05.jpg",
+                "shortDescription" : "Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "#"
+                    },
+                    {
+                        "label": "See all",
+                        "url": "#"
+                    }
+                ]
+            }
+        ],
+        "page2" : [
+            {
+                "title" : "Post 1",
+                "image" : "images/pic05.jpg",
+                "shortDescription" : "Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "#"
+                    },
+                    {
+                        "label": "See all",
+                        "url": "#"
+                    }
+                ]
+            },
+            {
+                "title" : "Post 1",
+                "image" : "images/pic05.jpg",
+                "shortDescription" : "Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "#"
+                    },
+                    {
+                        "label": "See all",
+                        "url": "#"
+                    }
+                ]
+            }
+        ],
+        "page3" : [
+
+        ]
+    }
+}
