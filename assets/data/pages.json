@@ -1,72 +1,121 @@
 {
     "pages" : 3,
     "content" : {
-        "featured" : {
-            "title" : "Post 1",
-                "image" : "images/pic05.jpg",
-                "shortDescription" : "Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.",
-                "actions" : [
-                    {
-                        "label": "Code",
-                        "url": "#"
-                    },
-                    {
-                        "label": "See all",
-                        "url": "#"
-                    }
-                ]
+        "featured" :  {
+            "title" : "Prestige Ecommerce",
+            "image" : "/images/pic05.jpg",
+            "shortDescription" : "A full stack platform(desktop,mobile,website) that provide an elegant and prestigous ecommerce experience for small shops, this includes a dektop app for the shop owner a mobile app for the clients and both a firebase/nodeJs server, built using nodeJs ,typescript , reactJS, flutter ,webosckets,firebase and mongodb. uses the password/user idir for checking the old owner beta website",
+            "actions" : [
+                {
+                    "label": "Clients App",
+                    "url": "https://play.google.com/store/apps/details?id=com.idir.online_order_client"
+                },
+                {
+                    "label": "Owner App",
+                    "url": "https://play.google.com/store/apps/details?id=com.idir.online_order_shop_mobile"
+                },
+                {
+                    "label": "Old website",
+                    "url": "https://idiryacine.github.io/online_order_server_app/"
+                }
+               
+            ]
         },
         "page1" : [
+           
             {
-                "title" : "Post 1",
+                "title" : "Prestige Ecommerce",
                 "image" : "/images/pic05.jpg",
-                "shortDescription" : "Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.",
+                "shortDescription" : "A full stack platform(desktop,mobile,website) that provide an elegant and prestigous ecommerce experience for small shops, this includes a dektop app for the shop owner a mobile app for the clients and both a firebase/nodeJs server, built using nodeJs ,typescript , reactJS, flutter ,webosckets,firebase and mongodb. uses the password/user idir for checking the old owner beta website",
+                "actions" : [
+                    {
+                        "label": "Clients App",
+                        "url": "https://play.google.com/store/apps/details?id=com.idir.online_order_client"
+                    },
+                    {
+                        "label": "Owner App",
+                        "url": "https://play.google.com/store/apps/details?id=com.idir.online_order_shop_mobile"
+                    },
+                    {
+                        "label": "Old website",
+                        "url": "https://idiryacine.github.io/online_order_server_app/"
+                    }
+                   
+                ]
+            },
+            {
+                "title" : "Higuruma bot",
+                "image" : "/images/pic05.jpg",
+                "shortDescription" : "A dicord bot built for managing discussions and debates ,it provides various functionality like vocals,turns,pre-registring arguments...etc, built using nodeJs",
                 "actions" : [
                     {
                         "label": "Code",
-                        "url": "#"
-                    },
-                    {
-                        "label": "See all",
-                        "url": "#"
+                        "url": "https://github.com/IDIRYACINE/higuruma-bot"
                     }
+                   
+                ]
+            },
+            {
+                "title" : "QRR Scanner",
+                "image" : "/images/pic05.jpg",
+                "shortDescription" : "A mobile app for scanning qr and barcodes and posting them through a rest api. Various features are present like timestamps ,grouping, duplications ...etc, built using kotlin and jetpackCompose",
+                "actions" : [
+                    {
+                        "label": "Play Store",
+                        "url": "https://play.google.com/store/apps/details?id=com.idir.codebarscanner"
+                    }
+                ]
+            },
+            {
+                "title" : "Maintenance management",
+                "image" : "/images/pic05.jpg",
+                "shortDescription" : "A full stack app for managing periodic maintenance of factories , built using nodeJs , javaFx and mysql . An external server was used as an LB7 to redirect traffic to the company local server since they lacked the ressources to host the app or maintain an external infrastructure",
+                "actions" : [
+                    
                 ]
             }
         ],
         "page2" : [
             {
-                "title" : "Post 1",
+                "title" : "Cheque writer",
                 "image" : "images/pic05.jpg",
-                "shortDescription" : "Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.",
+                "shortDescription" : "A desktop app for writing cheques , it allows you to write on top of cheques using a printer ,also includes a searchable history tracking feature, built using javaFx and sqlite",
                 "actions" : [
                     {
                         "label": "Code",
-                        "url": "#"
+                        "url": "https://github.com/IDIRYACINE/EmbagCheck"
+                    }
+                  
+                ]
+            },
+            {
+                "title" : "Bac",
+                "image" : "images/pic05.jpg",
+                "shortDescription" : "A simple app that provides exercises, solutions , lessons for bac students , it has a builtin timer and a progress/level tracking system, built using java , sqlite and androidX",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "https://github.com/IDIRYACINE/Re-Scheudle-Rpg-Time-Manager"
                     },
                     {
-                        "label": "See all",
-                        "url": "#"
+                        "label": "Play Store",
+                        "url": "https://play.google.com/store/apps/details?id=com.BacIdir.math"
                     }
                 ]
             },
             {
-                "title" : "Post 1",
+                "title" : "Rpg time manager",
                 "image" : "images/pic05.jpg",
-                "shortDescription" : "Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.",
+                "shortDescription" : "A simple app that helps you manage your time and tasks using an rpg reward/quest system , built using flutter and sqlite",
                 "actions" : [
                     {
                         "label": "Code",
-                        "url": "#"
-                    },
-                    {
-                        "label": "See all",
-                        "url": "#"
+                        "url": "https://github.com/IDIRYACINE/Re-Scheudle-Rpg-Time-Manager"
                     }
+                   
                 ]
             }
-        ],
-        "page3" : [
-
         ]
+       
     }
 }
