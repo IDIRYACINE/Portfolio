@@ -1,9 +1,9 @@
 {
-    "pages" : 3,
+    "pages" : 2,
     "content" : {
         "featured" :  {
             "title" : "Prestige Ecommerce",
-            "image" : "/images/pic05.jpg",
+            "image" : "images/overlay.jpg",
             "shortDescription" : "A full stack platform(desktop,mobile,website) that provide an elegant and prestigous ecommerce experience for small shops, this includes a dektop app for the shop owner a mobile app for the clients and both a firebase/nodeJs server, built using nodeJs ,typescript , reactJS, flutter ,webosckets,firebase and mongodb. uses the password/user idir for checking the old owner beta website",
             "actions" : [
                 {
@@ -22,63 +22,113 @@
             ]
         },
         "page1" : [
-           
             {
-                "title" : "Prestige Ecommerce",
-                "image" : "/images/pic05.jpg",
-                "shortDescription" : "A full stack platform(desktop,mobile,website) that provide an elegant and prestigous ecommerce experience for small shops, this includes a dektop app for the shop owner a mobile app for the clients and both a firebase/nodeJs server, built using nodeJs ,typescript , reactJS, flutter ,webosckets,firebase and mongodb. uses the password/user idir for checking the old owner beta website",
+                "title" : "Ecommerce app",
+                "image" : "/images/online_order_client.jpg",
+                "shortDescription" : "A mobile app for prestige ecommerce built using flutter,firebase and rest api . The app is build in a generic way that allows any buisness to use it with minimal or no change at all,it's also backed by an admin panel.",
                 "actions" : [
                     {
-                        "label": "Clients App",
+                        "label": "Play Store",
                         "url": "https://play.google.com/store/apps/details?id=com.idir.online_order_client"
                     },
                     {
-                        "label": "Owner App",
-                        "url": "https://play.google.com/store/apps/details?id=com.idir.online_order_shop_mobile"
-                    },
-                    {
-                        "label": "Old website",
-                        "url": "https://idiryacine.github.io/online_order_server_app/"
+                        "label": "Code",
+                        "url": "https://github.com/IDIRYACINE/online_order_client"
                     }
-                   
                 ]
             },
             {
-                "title" : "Higuruma bot",
-                "image" : "/images/pic05.jpg",
-                "shortDescription" : "A dicord bot built for managing discussions and debates ,it provides various functionality like vocals,turns,pre-registring arguments...etc, built using nodeJs",
+                "title" : "Ecommerce admin",
+                "image" : "/images/online_order_server_app.jpg",
+                "shortDescription" : "Admin panel site for ecommerce built using reactJs,typescript, saas, bootstrap ,websockets.Provides various functionality like managing orders in real-time,editing products .Use idir/idir to access the demo.",
+                "actions" : [
+                    {
+                        "label": "Github pages",
+                        "url": "https://idiryacine.github.io/online_order_server_app/"
+                    },
+                    {
+                        "label": "Code",
+                        "url": "https://github.com/IDIRYACINE/online_order_server_app"
+                    }
+                ]
+            },
+            {
+                "title" : "Ecommerce mobile admin",
+                "image" : "/images/online_order_server_mobile_app.jpg",
+                "shortDescription" : "An improved mobile version of the admin panel built using flutter,okHttp and google driver apis.",
                 "actions" : [
                     {
                         "label": "Code",
-                        "url": "https://github.com/IDIRYACINE/higuruma-bot"
+                        "url": "https://github.com/IDIRYACINE/online_order_shop_mobile"
+                    },
+                    {
+                        "label": "Play Store",
+                        "url": "https://play.google.com/store/apps/details?id=com.idir.online_order_shop_mobile"
+                    }
+                ]
+            },
+            {
+                "title" : "Ecommerce backend",
+                "image" : "/images/online_order_server_app.jpg",
+                "shortDescription" : "A backend server for the ecommerceApp built using nodeJs , expressJs, mongoDb and webscokets.",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "https://github.com/IDIRYACINE/online_order_server_nodeJs"
+                    }
+                ]
+            },
+            {
+                "title" : "Ecommerce desktop",
+                "image" : "/images/ecommerce_desktop.jpg",
+                "shortDescription" : "Desktop Ecommerce app with stock managmement,printing invoices,orders,statistiques. App can be linked with the previous Ecommerce projects , built using flutter and mongodb.",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "https://github.com/IDIRYACINE/StockManager"
                     }
                    
                 ]
             },
             {
                 "title" : "QRR Scanner",
-                "image" : "/images/pic05.jpg",
-                "shortDescription" : "A mobile app for scanning qr and barcodes and posting them through a rest api. Various features are present like timestamps ,grouping, duplications ...etc, built using kotlin and jetpackCompose",
+                "image" : "/images/qrr_scanner.jpg",
+                "shortDescription" : "A mobile app for scanning qr and barcodes and posting them through a rest api. Various features are present like timestamps ,grouping, duplications, built using kotlin and jetpackCompose",
                 "actions" : [
                     {
                         "label": "Play Store",
                         "url": "https://play.google.com/store/apps/details?id=com.idir.codebarscanner"
                     }
                 ]
-            },
-            {
-                "title" : "Maintenance management",
-                "image" : "/images/pic05.jpg",
-                "shortDescription" : "A full stack app for managing periodic maintenance of factories , built using nodeJs , javaFx and mysql . An external server was used as an LB7 to redirect traffic to the company local server since they lacked the ressources to host the app or maintain an external infrastructure",
-                "actions" : [
-                    
-                ]
             }
+            
         ],
         "page2" : [
             {
+                "title" : "Maintenance management",
+                "image" : "/images/maintenance_java.jpg",
+                "shortDescription" : "A full stack app for managing periodic maintenance of factories , built using javaFx . An external server was used as an LB7 to redirect traffic to the company server.",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "https://github.com/IDIRYACINE/GestionMaintenance"
+                    }
+                ]
+            },
+            {
+                "title" : "Maintenance backend",
+                "image" : "/images/maintenance_java.jpg",
+                "shortDescription" : "Backend server for maintenance management , built using nodeJs , mariaDb and websockets. Provides auth for admins/workers and managing the session",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "https://github.com/IDIRYACINE/GestionMaintenance_Backend"
+                    }
+                ]
+            },
+            {
                 "title" : "Cheque writer",
-                "image" : "images/pic05.jpg",
+                "image" : "images/check_java.jpg",
                 "shortDescription" : "A desktop app for writing cheques , it allows you to write on top of cheques using a printer ,also includes a searchable history tracking feature, built using javaFx and sqlite",
                 "actions" : [
                     {
@@ -89,8 +139,20 @@
                 ]
             },
             {
+                "title" : "Higuruma bot",
+                "image" : "/images/higuruma_bot.jpg",
+                "shortDescription" : "A dicord bot built for managing discussions and debates ,it provides various functionality like registring arguments,polls,managing speakers turns , prevent interrupts, built using nodeJs",
+                "actions" : [
+                    {
+                        "label": "Code",
+                        "url": "https://github.com/IDIRYACINE/higuruma-bot"
+                    }
+                   
+                ]
+            },
+            {
                 "title" : "Bac",
-                "image" : "images/pic05.jpg",
+                "image" : "images/bac.jpg",
                 "shortDescription" : "A simple app that provides exercises, solutions , lessons for bac students , it has a builtin timer and a progress/level tracking system, built using java , sqlite and androidX",
                 "actions" : [
                     {
@@ -105,7 +167,7 @@
             },
             {
                 "title" : "Rpg time manager",
-                "image" : "images/pic05.jpg",
+                "image" : "images/rpg.jpg",
                 "shortDescription" : "A simple app that helps you manage your time and tasks using an rpg reward/quest system , built using flutter and sqlite",
                 "actions" : [
                     {

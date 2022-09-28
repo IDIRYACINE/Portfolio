@@ -89,13 +89,24 @@
     }
 
     let getNextPage = function(){
-        if(currentPage + 1 > posts.pages) {return}
-        currentPage++
-        setCurrentPage(currentPage)
+        if(currentPage + 1 > posts.pages) 
+        {
+            turnOffPage(currentPage)
+            currentPage = 1
+        }
+
+        else{
+
+            turnOffPage(currentPage)
+            currentPage++
+        }
+
+        turnOnPage(currentPage)
+        populatePosts()
     }
 
     let getPrevPage = function(){
-        if(currentPage == 1) return
+        if(currentPage == 1) {return}
         currentPage--
 
         setCurrentPage(currentPage)
@@ -126,7 +137,7 @@
             setCurrentPage(parseInt($(this).text()))
         })
 
-        $('#next').click(function(){
+        $('.next').click(function(){
             getNextPage()
         })
 
