@@ -3618,4 +3618,14 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   }
 }
 
+.section {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.section.show {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
 /*# sourceMappingURL=main.css.map */

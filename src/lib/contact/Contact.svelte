@@ -1,11 +1,8 @@
-<script>
+<script lang="ts">
 	import { loadProfile } from "$lib/utility/StaticDataLoader";
 	import { onMount } from "svelte";
 
-    /**
-	 * @type {Profile}
-	 */
-    let profile = {
+    let profile:Profile = {
 		name: "",
 		email: "",
 		phone: "",
@@ -16,17 +13,7 @@
 
     onMount(async () => {
         profile = await loadProfile()
-        // @ts-ignore
-		const element = this.getElementsByTagName('div')[0];
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.isIntersecting) {
-					element.classList.add('visible');
-					observer.unobserve(element);
-				}
-			});
-		});
-		observer.observe(element);
+		
     })
     
 </script>
