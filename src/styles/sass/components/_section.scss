@@ -112,5 +112,6 @@
 	@include color-section;
 
 	.slice{
-		height: 100vh;
+		max-width: _size(wrapper);
+		margin: _size(element-margin) auto;
 	}

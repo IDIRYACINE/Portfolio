@@ -13,7 +13,7 @@
 	});
 </script>
 
-<div class="projectsHolder">
+<div id="projects">
 	{#if projectsLoaded}
 		{#each projectLibrary.projects as project}
             

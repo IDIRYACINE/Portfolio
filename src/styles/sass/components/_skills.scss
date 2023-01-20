@@ -1,0 +1,37 @@
+.skill-icon {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    & p {
+        font-size: 1rem;
+    }
+
+    &:hover {
+        color: _palette(accent);
+    }
+    
+
+}
+
+
+
+
+.skills-icons {
+    padding-left: 0;
+    list-style: none;
+    font-size: 3rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+
+.skills-title {
+    font-size: 3rem;
+    text-align: center;
+
+    &:hover {
+        color: _palette(accent);
+    }
+}

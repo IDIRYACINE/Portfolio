@@ -1,0 +1,73 @@
+{
+    "languages":[
+        {
+            "name" : "Java",
+            "fontAwesomeClass" : "fab fa-java"
+        },
+        {
+            "name" : "dart",
+            "fontAwesomeClass" : "fab fa-dart"
+        },
+        {
+            "name" : "javascript",
+            "fontAwesomeClass" : "fab fa-js"
+        },
+        {
+            "name" : "typescript",
+            "fontAwesomeClass" : "fab fa-typescript"
+        },
+        {
+            "name" : "kotlin",
+            "fontAwesomeClass" : "fab fa-kotlin"
+        },
+        {
+            "name" : "python",
+            "fontAwesomeClass" : "fab fa-python"
+        }
+        
+    ],
+    "frameworks":[
+        {
+            "name" : "flutter",
+            "fontAwesomeClass" : "fab fa-flutter"
+        },
+        {
+            "name" : "react",
+            "fontAwesomeClass" : "fab fa-react"
+        },
+        {
+            "name" : "nodejs",
+            "fontAwesomeClass" : "fab fa-node"
+        },
+        {
+            "name" : "javaFx",
+            "fontAwesomeClass" : "fab fa-fx"
+        },
+        {
+            "name" : "jetpack compose",
+            "fontAwesomeClass" : "fab fa-android"
+        }
+    ],
+    "databases":[
+        {
+            "name" : "firebase",
+            "fontAwesomeClass" : "fas fa-fire"
+        }
+        ,{
+            "name" : "mongoDb",
+            "fontAwesomeClass" : "fas fa-database"
+        },
+        {
+            "name" : "mysql",
+            "fontAwesomeClass" : "fas fa-database"
+        },
+        {
+            "name" : "mariaDb",
+            "fontAwesomeClass" : "fas fa-database"
+        },
+        {
+            "name" : "sqlite",
+            "fontAwesomeClass" : "fas fa-database"
+        }
+    ]
+}
