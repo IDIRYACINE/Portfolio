@@ -2432,6 +2432,10 @@ header.major .date:before, header.major .date:after {
   border-top-color: #eeeeee;
 }
 
+.slice {
+  height: 100vh;
+}
+
 /* Table */
 .table-wrapper {
   -webkit-overflow-scrolling: touch;
@@ -2606,6 +2610,15 @@ table.alt tbody tr td {
 }
 .pagination span {
   color: #eeeeee;
+}
+
+.projectCard {
+  background-color: #ffffff;
+  position: relative;
+  margin: 0 auto;
+  width: calc(100% - 4rem);
+  max-width: 72rem;
+  z-index: 2;
 }
 
 /* Wrapper */

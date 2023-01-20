@@ -1,0 +1,47 @@
+{
+    "featured": [0],
+    "projects": [
+        {
+            "name": "Fullstack Ecommerce",
+            "previewImage": "bg.jpg",
+            "previewDescription": "A fullstack ecommerce solution , backendServer , desktopApp , mobileApp ",
+            "description": "",
+            "tags": ["Flutter","Mongodb","Firebase","NodeJs","React","Typescript"],
+            "images": [],
+            "actions":[
+                {
+                    "name":"Blog",
+                    "link":""
+                }
+            ]
+        },
+        {
+            "name": "Fullstack Inventory Management",
+            "previewImage": "bg.jpg",
+            "previewDescription": "A fullstack inventory management solution , backendServer , desktopApp , mobileApp . \n  features : workerTracking , permissionsManagement , import/export utility , cross checking physical inventory with system inventory , etc",
+            "description": "",
+            "tags": ["Flutter","Mariadb","Typescript","NodeJs","JavaFx"],
+            "images": [],
+            "actions":[
+                {
+                    "name":"Blog",
+                    "link":""
+                }
+            ]
+        },
+        {
+            "name": "QRR Scanner",
+            "previewImage": "bg.jpg",
+            "previewDescription": "A mobile app for scanning qr and barcodes and posting them through a rest api. Various features are present like timestamps ,grouping, duplications.",
+            "description": "",
+            "tags": ["Kotlin","Sqlite","JetpackCompose"],
+            "images": [],
+            "actions":[
+                {
+                    "name":"PlayStore",
+                    "link":""
+                }
+            ]
+        }
+    ]
+}

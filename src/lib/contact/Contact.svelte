@@ -18,6 +18,8 @@
     
 </script>
 
+<div class="slice">
+
 <footer id="footer">
     <section class="split contact">
         <section>
@@ -40,6 +42,15 @@
     </section>
 </footer>
 
+
+<div id="copyright">
+    <ul>
+        <li>&copy; {profile.name}</li>
+        <li>Design: Html5up</li>
+    </ul>
+</div>
+
+</div>
 
 <style>
   
