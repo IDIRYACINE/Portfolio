@@ -1,11 +1,12 @@
-<script>
+<script lang="ts">
+	import { smallSizeScreenWidth } from '$lib/utility/Constans';
 	import { onMount } from 'svelte';
 	import { loadProfile } from '../utility/StaticDataLoader';
+	import NavbarContent from './components/NavbarContent.svelte';
+	import NavbarMenu from './components/NavbarMenu.svelte';
 
-	/**
-	 * @type {Profile}
-	 */
-	let profile = {
+
+	let profile:Profile = {
 		name: '',
 		email: '',
 		phone: '',
@@ -13,20 +14,24 @@
 		github: '',
 		secondaryEmail: ''
 	};
+	let innerWidth : any;
+
+	$: smallScreen = innerWidth < smallSizeScreenWidth;
 
 	onMount(async () => {
 		profile = await loadProfile();
 	});
+
 </script>
 
+<svelte:window bind:innerWidth />
+
 <nav id="nav">
-	<ul class="links">
-		<li><a href="#about-intro">About</a></li>
-		<li><a href="#skills">Skills</a></li>
-		<li><a href="#projects">Projects</a></li>
-		<li><a href="#education">Education</a></li>
-		<li><a href="#footer">Contact</a></li>
-	</ul>
+	{#if !smallScreen}
+	<NavbarContent/>
+	{:else }
+	<NavbarMenu/>
+	{/if}
 </nav>
 
 <div id="left-socials">

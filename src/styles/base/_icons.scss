@@ -60,4 +60,17 @@
         }
     }
 
+    &:hover{
+        @include icon-transition;
+    }
+
+}
+
+
+.alt-2{
+    &.icon{
+        &:before{
+            font-size: 2rem;
+        }
+    }
 }
