@@ -18,7 +18,6 @@
     
 </script>
 
-<div class="slice">
 
 <footer id="footer">
     <section class="split contact">
@@ -49,9 +48,3 @@
         <li>Design: Html5up</li>
     </ul>
 </div>
-
-</div>
-
-<style>
-  
-</style>

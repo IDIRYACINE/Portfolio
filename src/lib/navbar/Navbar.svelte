@@ -20,53 +20,36 @@
 </script>
 
 <nav id="nav">
-
-	<ul class="links" >
-		<li><a href="#intro">About</a></li>
+	<ul class="links">
+		<li><a href="#about-intro">About</a></li>
 		<li><a href="#skills">Skills</a></li>
 		<li><a href="#projects">Projects</a></li>
 		<li><a href="#education">Education</a></li>
 		<li><a href="#footer">Contact</a></li>
 	</ul>
+</nav>
 
+<div id="left-socials">
 	<ul class="icons">
 		<li>
-			<a href="{profile.facebook}" class="icon alt fa-file"
-				><span class="label">Resume</span></a
-			>
+			<a href={profile.facebook} class="icon alt fa-file"><span class="label">Resume</span></a>
 		</li>
 		<li>
-			<a href="{profile.github}" class="icon brands alt fa-github"
+			<a href={profile.github} class="icon brands alt fa-github"
 				><span class="label">GitHub</span></a
 			>
 		</li>
 		<li>
-			<a href="{profile.facebook}" class="icon brands alt fa-facebook-f"
+			<a href={profile.facebook} class="icon brands alt fa-facebook-f"
 				><span class="label">Facebook</span></a
 			>
 		</li>
 	</ul>
-</nav>
 
-<style global>
-	ul {
-		display: flex;
-		align-items: flex-end;
-		justify-content: space-evenly;
-	}
+	<div class="socials-line" />
+</div>
 
-	ul.links {
-		letter-spacing: 0.075em;
-		list-style: none;
-		margin-bottom: 0;
-		padding-left: 0;
-		display: felx;
-		flex-grow: 1;
-		flex-shrink: 1;
-		text-transform: uppercase;
-	}
-
-	ul.icons {
-		margin-bottom: 0;
-	}
-</style>
+<div id="right-socials">
+	<a href="#s" class="link">{profile.email}</a>
+	<div class="socials-line" />
+</div>

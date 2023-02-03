@@ -1,0 +1,53 @@
+html {
+    background-color: _palette(background);
+
+    
+}
+
+.link{
+    &:hover{
+        @include icon-transition;
+    }
+}
+ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+
+    &.links {
+        letter-spacing: 0.075em;
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        display: felx;
+        flex-grow: 1;
+        flex-shrink: 1;
+        text-transform: uppercase;
+    }
+
+    li {
+        a {
+            &:hover {
+                @include icon-transition;
+            }
+        }
+    }
+}
+
+#main {
+    padding: _size(padding) * 4;
+
+    @include tablet {
+        padding: _size(padding) * 2;
+    }
+
+}
+
+.action{
+    border: 0.1rem solid _palette(primary);
+    padding: _size(button-padding);
+
+    &:hover{
+        background-color: _palette(primary-container);
+    }
+}

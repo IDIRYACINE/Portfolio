@@ -1,0 +1,99 @@
+
+@mixin transition {
+    transition: all 0.2s ease-in-out;
+  }
+@mixin transition-long {
+  transition: all 1s ease-in-out;
+
+}  
+  
+  @mixin thirteen {
+    @media screen and (max-width: #{$thirteen-inch}) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media screen and (max-width: #{$desktop-width}) {
+      @content;
+    }
+  }
+  
+  @mixin little-desktop {
+    @media screen and (max-width: #{$little-desktop}) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media screen and (max-width: #{$tablet-width}) {
+      @content;
+    }
+  }
+  
+  @mixin weird-medium {
+    @media screen and (max-width: #{$weird-not-tablet-width}) {
+      @content;
+    }
+  }
+  
+  @mixin phablet {
+    @media screen and (max-width: #{$phablet-width}) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media screen and (max-width: #{$mobile-width}) {
+      @content;
+    }
+  }
+  
+  @mixin small-mobile {
+    @media screen and (max-width: #{$small-mobile-width}) {
+      @content;
+    }
+  }
+  
+  @mixin tiny-mobile {
+    @media screen and (max-width: #{$tiny-mobile-width}) {
+      @content;
+    }
+  }
+  
+  @mixin icon($content: false, $category: regular, $where: before) {
+  
+      text-decoration: none;
+  
+      &:#{$where} {
+  
+          @if $content {
+              content: $content;
+          }
+  
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-font-smoothing: antialiased;
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          line-height: 1;
+          text-transform: none !important;
+  
+          @if ($category == brands) {
+              font-family: 'Font Awesome 5 Brands';
+          }
+          @else {
+              font-family: 'Font Awesome 5 Free';
+              font-weight: 900;
+          }
+  
+      }
+  
+  }
+  
+@mixin icon-transition {
+      transition: all 0.5 ease-in-out;
+      color: _palette(primary);;
+      border-color: _palette(primary);
+}

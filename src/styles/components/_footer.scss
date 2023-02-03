@@ -1,0 +1,24 @@
+
+footer{
+    background-color: _palette(surface);
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    align-items: flex-start;
+    z-index: 0;
+
+    >section{
+        section{
+            padding-left: _size(element-margin);
+            display: flex;
+        }
+    }
+    a{
+        font-size: _font(small-size);
+    }
+
+    h3{
+        font-size: _font(meduim-size);
+        margin-right: _size(element-margin) * 2;
+        margin-bottom: 0.5rem;
+    }
+}

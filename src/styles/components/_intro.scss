@@ -1,0 +1,23 @@
+
+
+#about-intro{
+    @include transition;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+    #intro-title{
+        font-size: _font(headline-big);
+        font-weight: 700;
+        color: _palette(onSurface);
+        margin-bottom: 1rem;
+    }
+
+    #intro-description{
+        font-size: _font(headline-subtitle-big);
+        color: _palette(onSurface);
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,60 @@
+$night: #171c28;
+$black: #36363c;
+$dark-grey: #444452;
+$grey: #777777;
+$blue: #007bff;
+$light-blue: #00bfff2c;
+$slate: #afafbf;
+$off-white: #e7e7e7;
+$white: #ffffff;
+$green: #bae67e;
+$purple: #7d0ce8;
+$red: #ff0000;
+$orange: #e8850c;
+$yellow: #ffdc00;
+$accent: #ffcc66;
+// Fonts
+$font-stack: 'Source Sans Pro', system, system-ui, -apple-system,
+    BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+$Apercu: 'Apercu', $font-stack;
+// Media queries
+$fifteen-inch: 1440px;
+$thirteen-inch: 1280px;
+$desktop-width: 1024px;
+$little-desktop: 850px;
+$tablet-width: 768px;
+$weird-not-tablet-width: 630px;
+$phablet-width: 550px;
+$mobile-width: 480px;
+$small-mobile-width: 360px;
+$tiny-mobile-width: 330px;
+
+$fa-brands: 'Font Awesome 5 Brands';
+
+
+$palette :(
+    background : $night,
+    surface : $black,
+    on-surface : $dark-grey,
+    primary :$blue,
+    primary-container : $light-blue,
+);
+
+$font :(
+    small-size : 1rem,
+    meduim-size : 1.2rem,
+    large-size : 1.4rem,
+
+    headline-big : 2.5rem,
+    headline-subtitle-big : 2rem,
+);
+
+$size :(
+    element-height: 3rem,
+    element-margin: 2rem,
+    padding: 2rem,
+    wrapper: 72rem,
+    button-padding: 1rem,
+    );
+
+$duration :(transition : 2s)

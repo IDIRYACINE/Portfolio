@@ -1,8 +1,0 @@
-.projectCard {
-	background-color: _palette(bg);
-	position: relative;
-	margin: _size(element-margin) auto;
-	width: calc(100% - #{_size(padding) * 2});
-	max-width: _size(wrapper);
-	z-index: 2;
-}

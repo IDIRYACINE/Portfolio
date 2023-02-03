@@ -5,8 +5,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"watch-css": "sass --watch src/styles/sass/main.scss:static/css/main.css src/styles/sass/noscript.scss:static/css/noscript.css",
-		"build-css": "sass src/styles/sass/main.scss:static/css/main.css src/styles/sass/noscript.scss:static/css/noscript.css",
+		"watch-css": "sass --watch src/styles/main.scss:static/css/main.css",
+		"build-css": "sass src/styles/main.scss:static/css/main.css",
 		"preview": "vite preview",
 		"test": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
