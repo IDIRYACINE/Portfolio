@@ -396,4 +396,66 @@ aside.open {
   right: 0;
 }
 
+.note-worthy-project-card {
+  background-color: #36363c;
+  padding: 2rem;
+  height: 20rem;
+  position: relative;
+  box-sizing: border-box;
+}
+.note-worthy-project-card .project-title {
+  font-size: 1.4rem;
+  color: #e7e7e7;
+}
+.note-worthy-project-card .project-header {
+  display: flex;
+  justify-content: space-between;
+}
+.note-worthy-project-card .project-header .icon {
+  font-size: 2.4rem;
+}
+.note-worthy-project-card .project-description {
+  font-size: 1rem;
+  color: #777777;
+}
+.note-worthy-project-card .project-tags {
+  font-size: 1rem;
+  color: #777777;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.note-worthy-project-card:hover {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(-2%);
+}
+.note-worthy-project-card:hover .project-title {
+  color: #007bff;
+}
+
+#note-worthy-projects {
+  width: 100%;
+}
+#note-worthy-projects .section-title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #e7e7e7;
+  margin-bottom: 2rem;
+}
+#note-worthy-projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 1rem;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  #note-worthy-projects .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 480px) {
+  #note-worthy-projects .projects-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

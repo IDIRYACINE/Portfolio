@@ -1,0 +1,70 @@
+.note-worthy-project-card {
+    background-color: _palette(surface);
+    padding: _size(padding);
+    height: 20rem;
+    position: relative;
+    box-sizing: border-box;
+
+
+    .project-title {
+        font-size: _font(body-large);
+        color: _palette(text-accent);
+    }
+
+    .project-header {
+        display: flex;
+        justify-content: space-between;
+
+        .icon {
+            font-size: _font(headline-large);
+
+        }
+    }
+
+    .project-description {
+        font-size: _font(body-small);
+        color: _palette(text-secondary);
+    }
+
+    .project-tags {
+        font-size: _font(body-small);
+        color: _palette(text-secondary);
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    &:hover {
+        @include MoveUpTransition;
+
+        .project-title {
+            color: _palette(primary);
+        }
+    }
+}
+
+#note-worthy-projects {
+    width: 100%;
+
+    .section-title {
+        text-align: center;
+        font-size: _font(headline-small);
+        color: _palette(text-accent);
+        margin-bottom: _size(element-margin);
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 1rem;
+        width: 100%;
+
+        @include tablet {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+}

@@ -1,6 +1,7 @@
 
 interface ProjectLibrary {
     projects : Project[];
+    noteWorthy : Project[];
     featured : number[];
 }
 
@@ -18,4 +19,5 @@ interface Project{
 interface ProjectAction{
     name: string;
     link: string;
+    icon: string;
 }

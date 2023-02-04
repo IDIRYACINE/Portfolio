@@ -12,6 +12,7 @@
 	import Intro from '$lib/intro/Intro.svelte';
 	import Navbar from '$lib/navbar/Navbar.svelte';
 	import Copyright from '$lib/copyright/Copyright.svelte';
+	import NoteWorthyProjects from '$lib/noteWorthyProjects/NoteWorthyProjects.svelte';
 
 	let profile: Profile;
 	let projectsLibrary: ProjectLibrary;
@@ -32,6 +33,7 @@
 		<AboutIntro {profile} />
 		<About {profile} />
 		<ProjectsPreview {projectsLibrary} />
+		<NoteWorthyProjects {projectsLibrary} />
 		<Copyright {profile} />
 	</div>
 {:else}

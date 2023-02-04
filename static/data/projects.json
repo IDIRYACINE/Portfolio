@@ -1,17 +1,26 @@
 {
-    "featured": [0],
+    "featured": [
+        0
+    ],
     "projects": [
         {
             "name": "Fullstack Ecommerce",
             "previewImage": "images/test-featured-project-bg.jpg",
             "previewDescription": "A fullstack ecommerce solution , backendServer , desktopApp , mobileApp ",
             "description": "",
-            "tags": ["Flutter","Mongodb","Firebase","NodeJs","React","Typescript"],
+            "tags": [
+                "Flutter",
+                "Mongodb",
+                "Firebase",
+                "NodeJs",
+                "React",
+                "Typescript"
+            ],
             "images": [],
-            "actions":[
+            "actions": [
                 {
-                    "name":"Blog",
-                    "link":""
+                    "name": "Blog",
+                    "link": ""
                 }
             ]
         },
@@ -20,12 +29,18 @@
             "previewImage": "images/test-featured-project-bg.jpg",
             "previewDescription": "A fullstack inventory management solution , backendServer , desktopApp , mobileApp . \n  features : workerTracking , permissionsManagement , import/export utility , cross checking physical inventory with system inventory , etc",
             "description": "",
-            "tags": ["Flutter","Mariadb","Typescript","NodeJs","JavaFx"],
+            "tags": [
+                "Flutter",
+                "Mariadb",
+                "Typescript",
+                "NodeJs",
+                "JavaFx"
+            ],
             "images": [],
-            "actions":[
+            "actions": [
                 {
-                    "name":"Blog",
-                    "link":""
+                    "name": "Blog",
+                    "link": ""
                 }
             ]
         },
@@ -34,12 +49,81 @@
             "previewImage": "images/test-featured-project-bg.jpg",
             "previewDescription": "A mobile app for scanning qr and barcodes and posting them through a rest api. Various features are present like timestamps ,grouping, duplications.",
             "description": "",
-            "tags": ["Kotlin","Sqlite","JetpackCompose"],
+            "tags": [
+                "Kotlin",
+                "Sqlite",
+                "JetpackCompose"
+            ],
             "images": [],
-            "actions":[
+            "actions": [
                 {
-                    "name":"PlayStore",
-                    "link":""
+                    "name": "PlayStore",
+                    "icon": "fab fa-google-play",
+                    "link": ""
+                }
+            ]
+        }
+    ],
+    "noteWorthy": [
+        {
+            "name": "Fullstack Ecommerce",
+            "previewImage": "images/test-featured-project-bg.jpg",
+            "previewDescription": "A fullstack ecommerce solution , backendServer , desktopApp , mobileApp ",
+            "description": "",
+            "tags": [
+                "Flutter",
+                "Mongodb",
+                "Firebase",
+                "NodeJs",
+                "React",
+                "Typescript"
+            ],
+            "images": [],
+            "actions": [
+                {
+                    "name": "Blog",
+                    "icon": "fas fa-link",
+                    "link": ""
+                }
+            ]
+        },
+        {
+            "name": "Fullstack Inventory Management",
+            "previewImage": "images/test-featured-project-bg.jpg",
+            "previewDescription": "A fullstack inventory management solution , backendServer , desktopApp , mobileApp . \n  features : workerTracking , permissionsManagement , import/export utility , cross checking physical inventory with system inventory , etc",
+            "description": "",
+            "tags": [
+                "Flutter",
+                "Mariadb",
+                "Typescript",
+                "NodeJs",
+                "JavaFx"
+            ],
+            "images": [],
+            "actions": [
+                {
+                    "name": "Blog",
+                    "icon": "fas fa-link",
+                    "link": ""
+                }
+            ]
+        },
+        {
+            "name": "QRR Scanner",
+            "previewImage": "images/test-featured-project-bg.jpg",
+            "previewDescription": "A mobile app for scanning qr and barcodes and posting them through a rest api. Various features are present like timestamps ,grouping, duplications.",
+            "description": "",
+            "tags": [
+                "Kotlin",
+                "Sqlite",
+                "JetpackCompose"
+            ],
+            "images": [],
+            "actions": [
+                {
+                    "name": "PlayStore",
+                    "icon": "fas fa-link",
+                    "link": ""
                 }
             ]
         }
