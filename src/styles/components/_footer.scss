@@ -1,24 +1,32 @@
-
-footer{
+#footer {
     background-color: _palette(surface);
     padding: 1rem 0;
     font-size: 0.8rem;
     align-items: flex-start;
-    z-index: 0;
 
-    >section{
-        section{
+    >section {
+        section {
             padding-left: _size(element-margin);
             display: flex;
         }
     }
-    a{
+
+    a {
         font-size: _font(body-small);
     }
 
-    h3{
-        font-size: _font(body-meduim-size );
+    h3 {
+        font-size: _font(body-meduim-size);
         margin-right: _size(element-margin) * 2;
         margin-bottom: 0.5rem;
     }
+}
+
+
+#copyright {
+    position: absolute;
+    bottom: 10;
+    justify-content: center;
+    align-items: center;
+
 }

@@ -1,5 +1,7 @@
 $night: #171c28;
+$night-transparent: rgba(23, 28, 40, 0.9);
 $black: #36363c;
+$black-transparent: rgba(54, 54, 60, 0.9);
 $dark-grey: #444452;
 $grey: #777777;
 $blue: #007bff;
@@ -32,19 +34,19 @@ $tiny-mobile-width: 330px;
 $fa-brands: 'Font Awesome 5 Brands';
 
 
-$palette :(
-    background : $night,
+$palette :(background : $night,
     surface : $black,
     text-primary : $dark-grey,
     text-accent : $off-white,
     text-secondary : $grey,
     primary :$blue,
-    primary-container : $light-blue,
+    accent : $light-blue,
     seperator : $dark-grey,
+    surface-transparent : $black-transparent,
+    background-transparent : $night-transparent,
 );
 
-$font :(
-    body-small : 1rem,
+$font :(body-small : 1rem,
     body-meduim : 1.2rem,
     body-large : 1.4rem,
     headline-small : 1.6rem,
@@ -52,8 +54,7 @@ $font :(
     headline-large : 2.4rem,
 );
 
-$size :(
-    element-height: 3rem,
+$size :(element-height: 3rem,
     element-margin: 2rem,
     padding: 2rem,
     wrapper: 72rem,
@@ -61,6 +62,11 @@ $size :(
     icon-extra-large: 3rem,
     socials-line-height: 10rem,
     escape-horizontal: 2rem,
+    featured-project-image-width: 20rem,
+    featured-project-image-height: 10rem,
+    featured-project-overview-width: 60%,
+    featured-project-overview-height: 50%,
+    featured-project-card-height: 25rem,
 );
 
 $duration :(transition : 2s)

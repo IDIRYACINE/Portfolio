@@ -3,8 +3,8 @@
 
 	function handleClick(e: MouseEvent & { currentTarget: EventTarget & HTMLAnchorElement; }){
 		e.preventDefault();
-		toggleSideBarIfExists();
 		window.location.href = e.currentTarget.href
+		toggleSideBarIfExists();
 	}
 </script>
 

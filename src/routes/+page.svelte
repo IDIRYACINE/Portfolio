@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { loadProfile } from '../lib/utility/StaticDataLoader';
+	import { loadProjects } from '$lib/utility/StaticDataLoader';
 
 	import Contact from '$lib/contact/Contact.svelte';
 	import Education from '$lib/education/Education.svelte';
@@ -13,12 +14,13 @@
 	import Copyright from '$lib/copyright/Copyright.svelte';
 
 	let profile: Profile;
+	let projectsLibrary: ProjectLibrary;
 
 	$: isLoaded = false;
 
 	onMount(async () => {
 		profile = await loadProfile();
-
+		projectsLibrary = await loadProjects();
 		isLoaded = true;
 	});
 </script>
@@ -29,8 +31,7 @@
 	<div id="main">
 		<AboutIntro {profile} />
 		<About {profile} />
-
-		<Contact {profile} />
+		<ProjectsPreview {projectsLibrary} />
 		<Copyright {profile} />
 	</div>
 {:else}

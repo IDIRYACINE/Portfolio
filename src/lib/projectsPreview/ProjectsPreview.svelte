@@ -1,24 +1,30 @@
 <script lang="ts">
 	import ProjectCard from '$lib/projectsPreview/projectCard/ProjectCard.svelte';
-	import { loadProjects } from '$lib/utility/StaticDataLoader';
-	import { onMount } from 'svelte';
+	import { range } from '$lib/utility/Range';
+	
 
-	let projectLibrary: ProjectLibrary;
+	export let projectsLibrary: ProjectLibrary;
 
-	let projectsLoaded = false;
+	function getProject(index: number): Project {
+		return projectsLibrary.projects[index];
+	}
 
-	onMount(async () => {
-		projectLibrary = await loadProjects();
-		projectsLoaded = true;
-	});
 </script>
 
-<div id="projects">
-	{#if projectsLoaded}
-		{#each projectLibrary.projects as project}
-            
-			<ProjectCard {project} />
-            
+<div class="portfolio-section" id="featured-projects">
+	
+	<p class="section-title">Projects</p>
+
+	<div class="section-content">
+		
+		{#each range(0, projectsLibrary.projects.length,1) as index}
+			{#if index % 2 === 0}
+				<ProjectCard project={getProject(index)} rightToLeftProject={false} />
+			{:else}
+				<ProjectCard project={getProject(index)} rightToLeftProject={true} />
+			{/if}
+			
 		{/each}
-	{/if}
+	</div>
+            
 </div>

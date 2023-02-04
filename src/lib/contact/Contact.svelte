@@ -7,7 +7,7 @@
 </script>
 
 
-<footer id="footer">
+<div id="footer">
     <section class="split contact">
         <section>
             <h3>Phone</h3>
@@ -27,5 +27,5 @@
             </ul>
         </section>
     </section>
-</footer>
+</div>
 

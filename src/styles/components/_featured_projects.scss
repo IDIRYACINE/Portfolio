@@ -1,0 +1,81 @@
+.project-card {
+    position: relative;
+    top: 0;
+    margin: (_size(element-margin) * 2) 0 0 0;
+    width: 100%;
+    height: _size(featured-project-card-height);
+
+
+    .project-overview {
+        position: absolute;
+        height: 100%;
+        width: _size(featured-project-overview-width);
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        @include PositionOreintation;
+
+        @include tablet {
+            background-color: _palette(surface-transparent);
+            width: 100%;
+        }
+
+        .featured-project-label {
+            font-size: _font(body-small);
+            color: _palette(primary);
+
+        }
+
+        .featured-project-title {
+            width: 100%;
+            font-size: _font(body-meduim);
+            color: _palette(text-accent);
+
+            &:hover {
+                color: _palette(primary);
+            }
+
+
+        }
+
+        .featured-project-description {
+            background-color: _palette(surface);
+            width: 100%;
+            height: _size(featured-project-overview-height) / 2;
+            font-size: _font(body-small);
+            color: _palette(text-secondary);
+
+            @include tablet {
+                background-color: transparent;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            overflow-y: scroll;
+
+        }
+
+    }
+
+    .featured-project-image {
+        position: absolute;
+        width: _size(featured-project-overview-width);
+        height: _size(featured-project-overview-height);
+        object-fit: cover;
+        z-index: 9;
+
+        @include tablet {
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @include PositionOreintation;
+
+    }
+
+
+
+}

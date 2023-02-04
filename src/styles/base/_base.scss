@@ -39,11 +39,11 @@ ul {
     padding: _size(button-padding);
 
     &:hover {
-        background-color: _palette(primary-container);
+        background-color: _palette(accent);
     }
 }
 
-intro{
+#intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,10 +52,11 @@ intro{
     height: 80vh;
 }
 
-copyright{
-    position: absolute;
-    bottom: 10;
-    justify-content: center;
-    align-items: center;
+aside {
+    right: -100%;
+    transition: right 0.3s ease-in-out;
 
+    &.open {
+        right: 0;
+    }
 }

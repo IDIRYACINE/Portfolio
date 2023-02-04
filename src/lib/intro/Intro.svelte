@@ -2,6 +2,6 @@
 
 
 
-<intro>
-    <loading-logo class = "fab fa-js"/>
-</intro>
+<div id="intro">
+    <span class = "loading-intro fab fa-js"/>
+</div>

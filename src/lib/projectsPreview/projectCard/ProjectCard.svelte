@@ -1,23 +1,58 @@
 <script lang="ts">
-	import CardAction from "./CardAction.svelte";
+	import CardAction from './CardAction.svelte';
 
+	export let project: Project;
+	export let rightToLeftProject: boolean;
 
+	let positionOverviewToRight: boolean;
+	let positionOverviewToLeft: boolean;
 
+	let positionImageToLeft: boolean;
+	let positionImageToRight: boolean;
 
-    export let project: Project;
-    
+	if (rightToLeftProject === true) {
+		positionOverviewToRight = false;
+		positionOverviewToLeft = true;
+
+		positionImageToLeft = false;
+		positionImageToRight = true;
+	} else {
+		positionOverviewToRight = true;
+		positionOverviewToLeft = false;
+
+		positionImageToLeft = true;
+		positionImageToRight = false;
+	}
 </script>
 
+<div class="project-card">
+	<div
+		class="project-overview"
+		class:rightPosition={positionOverviewToRight}
+		class:leftPosition={positionOverviewToLeft}
+	>
+		<p class="featured-project-label">featured project</p>
+		<p class="featured-project-title">
+			{project.name}
+		</p>
 
-<div class="projectCard flex flex-col sm:flex-row items-center border rounded-lg shadow-md  hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-    <img class="object-cover w-full rounded-t-lg h-56 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="{project.previewImage}" alt="">
-    <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{project.name}</h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{project.previewDescription}</p>
-        <row> 
-            {#each project.actions as action}
-                <CardAction {action} />
-            {/each}
-        </row>
-    </div>
+		<p class="featured-project-description">
+			{project.previewDescription}
+		</p>
+
+		<div class="project-tags" />
+		<div class="project-actions">
+			{#each project.actions as action}
+				<CardAction {action} />
+			{/each}
+		</div>
+	</div>
+
+	<img
+		class="featured-project-image"
+		src={project.previewImage}
+		alt=""
+		class:rightPosition={positionImageToRight}
+		class:leftPosition={positionImageToLeft}
+	/>
 </div>

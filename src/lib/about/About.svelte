@@ -2,11 +2,11 @@
 	export let profile: Profile;
 </script>
 
-<portfolio-section id="about-me">
-	<section-title>About Me</section-title>
-	<section-content>
+<div class="portfolio-section" id="about-me">
+	<p class="section-title">About Me</p >
+	<div class="section-content">
 		{#each profile.biography as aboutMe}
 			<p class="section-paragraph">{aboutMe}</p>
 		{/each}
-	</section-content>
-</portfolio-section>
+	</div>
+</div>

@@ -12,13 +12,3 @@
 	<NavbarContent toggleSideBarIfExists={onHrefClicked}/>
 </aside>
 
-<style>
-	aside {
-		right: -100%;
-		transition: right 0.3s ease-in-out;
-	}
-
-	.open {
-		right: 0;
-	}
-</style>

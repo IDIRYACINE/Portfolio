@@ -97,3 +97,15 @@
       color: _palette(primary);;
       border-color: _palette(primary);
 }
+
+@mixin PositionOreintation {
+
+  &.leftPosition{
+    left: 0;
+  }
+
+  &.rightPosition{
+    direction: rtl;
+    right: 0;
+  }
+}
