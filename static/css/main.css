@@ -69,6 +69,7 @@ html {
 
 body {
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .scroll-lock {
@@ -104,6 +105,22 @@ ul {
   background-color: rgba(0, 191, 255, 0.1725490196);
 }
 
+intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  height: 80vh;
+}
+
+copyright {
+  position: absolute;
+  bottom: 10;
+  justify-content: center;
+  align-items: center;
+}
+
 #nav {
   display: flex;
   flex-direction: row;
@@ -133,7 +150,7 @@ ul {
   flex-shrink: 1;
   text-transform: uppercase;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   #nav ul.links {
     min-height: 100vh;
     flex-direction: column;
@@ -164,13 +181,16 @@ ul {
   }
 }
 #left-socials ul {
-  vertical-align: baseline;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#left-socials .socials-line {
-  height: 10rem;
+#left-socials ul::after {
+  content: "";
+  display: flex;
   width: 0.1rem;
-  background-color: white;
+  height: 10rem;
+  background-color: #444452;
 }
 
 #right-socials {
@@ -193,11 +213,12 @@ ul {
   writing-mode: vertical-lr;
   text-orientation: mixed;
 }
-#right-socials .socials-line {
-  position: relative;
-  height: 10rem;
+#right-socials::after {
+  content: "";
+  display: flex;
   width: 0.1rem;
-  background-color: white;
+  height: 10rem;
+  background-color: #444452;
 }
 
 .rotate-animation {
@@ -235,7 +256,6 @@ footer a {
   font-size: 1rem;
 }
 footer h3 {
-  font-size: 1.2rem;
   margin-right: 4rem;
   margin-bottom: 0.5rem;
 }
@@ -244,19 +264,47 @@ footer h3 {
   transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 80vh;
   align-items: flex-start;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 #about-intro #intro-title {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 #about-intro #intro-description {
-  font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+portfolio-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #444452;
+}
+portfolio-section section-title {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.6rem;
+  color: #e7e7e7;
+  margin-bottom: 2rem;
+  width: 100%;
+  flex: 2;
+  align-items: center;
+}
+portfolio-section section-title::after {
+  content: "";
+  flex: 1;
+  padding-left: 2rem;
+  vertical-align: middle;
+  height: 0.1rem;
+  background-color: #444452;
+}
+portfolio-section .section-paragraph {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

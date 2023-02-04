@@ -13,11 +13,11 @@ footer{
         }
     }
     a{
-        font-size: _font(small-size);
+        font-size: _font(body-small);
     }
 
     h3{
-        font-size: _font(meduim-size);
+        font-size: _font(body-meduim-size );
         margin-right: _size(element-margin) * 2;
         margin-bottom: 0.5rem;
     }

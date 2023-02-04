@@ -35,18 +35,21 @@ $fa-brands: 'Font Awesome 5 Brands';
 $palette :(
     background : $night,
     surface : $black,
-    on-surface : $dark-grey,
+    text-primary : $dark-grey,
+    text-accent : $off-white,
+    text-secondary : $grey,
     primary :$blue,
     primary-container : $light-blue,
+    seperator : $dark-grey,
 );
 
 $font :(
-    small-size : 1rem,
-    meduim-size : 1.2rem,
-    large-size : 1.4rem,
-
-    headline-big : 2.5rem,
-    headline-subtitle-big : 2rem,
+    body-small : 1rem,
+    body-meduim : 1.2rem,
+    body-large : 1.4rem,
+    headline-small : 1.6rem,
+    headline-medium : 2rem,
+    headline-large : 2.4rem,
 );
 
 $size :(
@@ -55,6 +58,9 @@ $size :(
     padding: 2rem,
     wrapper: 72rem,
     button-padding: 1rem,
-    );
+    icon-extra-large: 3rem,
+    socials-line-height: 10rem,
+    escape-horizontal: 2rem,
+);
 
 $duration :(transition : 2s)

@@ -1,0 +1,32 @@
+
+portfolio-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color : _palette(text-primary);
+    
+    section-title{
+        display: flex;
+        flex-direction: row;
+        font-size: _font(headline-small);
+        color: _palette(text-accent);
+        margin-bottom: _size(element-margin);
+        width: 100%;
+        flex:2;
+        align-items: center;
+
+        &::after{
+            content: '';
+            flex: 1;
+            padding-left: _size(escape-horizontal);
+            vertical-align: middle;
+            height: 0.1rem;
+            background-color: _palette(seperator);
+        }
+    }
+
+    .section-paragraph{
+        margin-bottom: _size(element-margin);
+    }
+}

@@ -7,4 +7,5 @@ interface Profile {
     facebook : string,
     github : string,
     secondaryEmail : string,
+    biography : string[],
 }

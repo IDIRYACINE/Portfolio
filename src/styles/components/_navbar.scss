@@ -26,7 +26,7 @@
             flex-shrink: 1;
             text-transform: uppercase;
 
-            @include mobile {
+            @include tablet {
                 min-height: 100vh;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -62,17 +62,22 @@
     }
 
     ul {
-        vertical-align: baseline;
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::after {
+            content: '';
+            display: flex;
+            width: 0.1rem;
+            height: _size(socials-line-height);
+            background-color: _palette(seperator);
+        }
+
     }
 
 
 
-    .socials-line {
-        height: 10rem;
-        width: 0.1rem;
-        background-color: white;
-    }
 
 }
 
@@ -95,14 +100,16 @@
     a {
         writing-mode: vertical-lr;
         text-orientation: mixed;
+
+
     }
 
-
-    .socials-line {
-        position: relative;
-        height: 10rem;
+    &::after {
+        content: '';
+        display: flex;
         width: 0.1rem;
-        background-color: white;
+        height: _size(socials-line-height);
+        background-color: _palette(seperator);
     }
 
 }

@@ -1,20 +1,8 @@
 <script lang="ts">
-	import { loadProfile } from "$lib/utility/StaticDataLoader";
-	import { onMount } from "svelte";
+	
 
-    let profile:Profile = {
-		name: "",
-		email: "",
-		phone: "",
-		facebook: "",
-		github: "",
-		secondaryEmail: ""
-	}
+    export let profile:Profile ;
 
-    onMount(async () => {
-        profile = await loadProfile()
-		
-    })
     
 </script>
 
@@ -41,10 +29,3 @@
     </section>
 </footer>
 
-
-<div id="copyright">
-    <ul>
-        <li>&copy; {profile.name}</li>
-        <li>Design: Html5up</li>
-    </ul>
-</div>

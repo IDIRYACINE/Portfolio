@@ -4,19 +4,19 @@
     @include transition;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 80vh;
     align-items: flex-start;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
     #intro-title{
-        font-size: _font(headline-big);
+        font-size: _font(headline-large);
         font-weight: 700;
         color: _palette(onSurface);
         margin-bottom: 1rem;
     }
 
     #intro-description{
-        font-size: _font(headline-subtitle-big);
+        font-size: _font(headline-meduim);
         color: _palette(onSurface);
         margin-bottom: 1rem;
     }
