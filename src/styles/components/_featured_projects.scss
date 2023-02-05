@@ -5,6 +5,8 @@
     width: 100%;
     height: _size(featured-project-card-height);
 
+   
+
     .project-overview {
         position: absolute;
         height: 100%;
@@ -47,7 +49,7 @@
         .featured-project-content {
             width: 100%;
             height: fit-content;
-            padding: _size(padding) ;
+            padding: _size(padding);
             margin-bottom: _size(element-margin-extra-small);
             border-radius: _misc(border-radius);
             background-color: _palette(surface);
@@ -108,19 +110,14 @@
             }
         }
 
-
-
-
     }
 
-    .featured-project-image {
+    .featured-img-container {
         position: absolute;
         width: _size(featured-project-overview-width);
         height: _size(featured-project-overview-height);
-        border-radius: _misc(border-radius);
-        object-fit: cover;
         bottom: 35%;
-        z-index: 9;
+        z-index: 8;
 
         @include tablet {
             top: 0;
@@ -130,7 +127,38 @@
 
         @include PositionOreintation;
 
+        .image-filter {
+            position: absolute;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            background-color: _palette(background);
+            opacity: 0.75;
+            transition: all 0.5s ease-in;
+
+            &:hover {
+                transition: all 0.5s ease-out;
+                opacity: 0;
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        .featured-project-image {
+            width: 100%;
+            height: 100%;
+            border-radius: _misc(border-radius);
+            object-fit: cover;
+
+        }
     }
+
+
+
+
 
 
 

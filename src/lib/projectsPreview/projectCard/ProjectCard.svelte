@@ -38,13 +38,11 @@
 			</p>
 		</div>
 		<div class="featured-project-content">
-			
 			{#each project.previewDescription as paragraph}
-			<p class="featured-project-paragraph">
-				{paragraph}
-			</p>
+				<p class="featured-project-paragraph">
+					{paragraph}
+				</p>
 			{/each}
-			
 		</div>
 		<div class="featured-project-footer">
 			<div class="featured-project-tags">
@@ -60,11 +58,13 @@
 		</div>
 	</div>
 
-	<img
-		class="featured-project-image"
-		src={project.previewImage}
-		alt=""
+	<div
+		class="featured-img-container"
 		class:rightPosition={positionImageToRight}
 		class:leftPosition={positionImageToLeft}
-	/>
+	>
+		<img class="featured-project-image" src={project.previewImage} alt="" />
+		<div class="image-filter" />
+
+	</div>
 </div>

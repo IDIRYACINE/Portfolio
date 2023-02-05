@@ -49,7 +49,7 @@ ul {
     justify-content: center;
     align-items: center;
     font-size: _size(icon-extra-large);
-    height: 80vh;
+    height: 100vh;
 }
 
 aside {
@@ -60,3 +60,15 @@ aside {
         right: 0;
     }
 }
+
+.fade-wrapper{
+    opacity: 0;
+    transform: translateY(100%);
+
+    &.visible{
+        transition: all 2s ease-in-out;
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+

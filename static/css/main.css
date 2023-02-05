@@ -111,7 +111,7 @@ ul {
   justify-content: center;
   align-items: center;
   font-size: 3rem;
-  height: 80vh;
+  height: 100vh;
 }
 
 aside {
@@ -120,6 +120,16 @@ aside {
 }
 aside.open {
   right: 0;
+}
+
+.fade-wrapper {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.fade-wrapper.visible {
+  transition: all 2s ease-in-out;
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 #nav {
@@ -268,13 +278,11 @@ aside.open {
 }
 
 #about-intro {
-  transition: all 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
-  min-height: 80vh;
+  min-height: 100vh;
   align-items: flex-start;
-  align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 #about-intro #intro-title {
   font-size: 2.4rem;
@@ -424,28 +432,51 @@ aside.open {
   flex-direction: row;
   justify-content: flex-start;
 }
-.project-card .featured-project-image {
+.project-card .featured-img-container {
   position: absolute;
   width: 60%;
   height: 50%;
-  border-radius: 0.5rem;
-  object-fit: cover;
   bottom: 35%;
-  z-index: 9;
+  z-index: 8;
 }
 @media screen and (max-width: 768px) {
-  .project-card .featured-project-image {
+  .project-card .featured-img-container {
     top: 0;
     width: 100%;
     height: 100%;
   }
 }
-.project-card .featured-project-image.leftPosition {
+.project-card .featured-img-container.leftPosition {
   left: 0;
 }
-.project-card .featured-project-image.rightPosition {
+.project-card .featured-img-container.rightPosition {
   direction: rtl;
   right: 0;
+}
+.project-card .featured-img-container .image-filter {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #171c28;
+  opacity: 0.75;
+  transition: all 0.5s ease-in;
+}
+.project-card .featured-img-container .image-filter:hover {
+  transition: all 0.5s ease-out;
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  .project-card .featured-img-container .image-filter {
+    display: none;
+  }
+}
+.project-card .featured-img-container .featured-project-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
 }
 
 .note-worthy-project-card {
@@ -486,7 +517,7 @@ aside.open {
   font-size: 1.4rem;
   color: #e7e7e7;
 }
-.note-worthy-project-card .project-content .project-description {
+.note-worthy-project-card .project-content .project-paragraph {
   font-size: 1rem;
   color: #777777;
 }

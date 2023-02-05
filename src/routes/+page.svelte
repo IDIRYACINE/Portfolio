@@ -13,6 +13,7 @@
 	import Navbar from '$lib/navbar/Navbar.svelte';
 	import Copyright from '$lib/copyright/Copyright.svelte';
 	import NoteWorthyProjects from '$lib/noteWorthyProjects/NoteWorthyProjects.svelte';
+	import FadeInWidget from '$lib/utilityWidgets/FadeInWidget.svelte';
 
 	let profile: Profile;
 	let projectsLibrary: ProjectLibrary;
@@ -30,10 +31,11 @@
 	<Navbar {profile} />
 
 	<div id="main">
-		<AboutIntro {profile} />
-		<About {profile} />
-		<ProjectsPreview {projectsLibrary} />
-		<NoteWorthyProjects {projectsLibrary} />
+		<FadeInWidget><AboutIntro {profile} /></FadeInWidget>
+
+		<FadeInWidget><About {profile} /></FadeInWidget>
+		<FadeInWidget><ProjectsPreview {projectsLibrary} /></FadeInWidget>
+		<FadeInWidget><NoteWorthyProjects {projectsLibrary} /></FadeInWidget>
 		<Copyright {profile} />
 	</div>
 {:else}
