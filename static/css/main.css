@@ -89,11 +89,11 @@ ul {
 }
 
 #main {
-  padding: 8rem;
+  padding: 4rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 630px) {
   #main {
-    padding: 4rem;
+    padding: 2rem;
   }
 }
 
@@ -176,7 +176,7 @@ aside.open {
   width: 3rem;
   z-index: 99;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   #left-socials {
     display: none;
   }
@@ -205,7 +205,7 @@ aside.open {
   width: 3rem;
   z-index: 99;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 630px) {
   #right-socials {
     display: none;
   }
@@ -328,6 +328,7 @@ aside.open {
   position: absolute;
   height: 100%;
   width: 60%;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   z-index: 10;
@@ -342,43 +343,94 @@ aside.open {
 @media screen and (max-width: 768px) {
   .project-card .project-overview {
     background-color: rgba(54, 54, 60, 0.9);
+    border-radius: 0.5rem;
     width: 100%;
   }
 }
-.project-card .project-overview .featured-project-label {
+.project-card .project-overview .featured-project-header {
+  height: 20%;
+  justify-content: start;
+  margin-bottom: 0.25rem;
+}
+.project-card .project-overview .featured-project-header .featured-project-label {
   font-size: 1rem;
   color: #007bff;
 }
-.project-card .project-overview .featured-project-title {
+.project-card .project-overview .featured-project-header .featured-project-title {
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #e7e7e7;
 }
-.project-card .project-overview .featured-project-title:hover {
+.project-card .project-overview .featured-project-header .featured-project-title:hover {
   color: #007bff;
 }
-.project-card .project-overview .featured-project-description {
-  background-color: #36363c;
+.project-card .project-overview .featured-project-content {
   width: 100%;
-  height: 25%;
+  height: fit-content;
+  padding: 2rem;
+  margin-bottom: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: #36363c;
   font-size: 1rem;
   color: #777777;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 @media screen and (max-width: 768px) {
-  .project-card .project-overview .featured-project-description {
+  .project-card .project-overview .featured-project-content {
     background-color: transparent;
+    padding: 0;
     width: 100%;
     height: 100%;
     justify-content: center;
     align-items: center;
   }
 }
+.project-card .project-overview .featured-project-content .featured-project-paragraph {
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 0.25rem;
+}
+.project-card .project-overview .featured-project-content .featured-project-paragraph:last-child {
+  margin-bottom: 0;
+}
+.project-card .project-overview .featured-project-footer {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.project-card .project-overview .featured-project-footer.leftPosition {
+  left: 0;
+}
+.project-card .project-overview .featured-project-footer.rightPosition {
+  direction: rtl;
+  right: 0;
+}
+.project-card .project-overview .featured-project-footer .featured-project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 0.25rem;
+  color: #777777;
+}
+.project-card .project-overview .featured-project-footer .featured-project-tags .featured-project-tag {
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  width: fit-content;
+}
+.project-card .project-overview .featured-project-footer .featured-project-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 .project-card .featured-project-image {
   position: absolute;
   width: 60%;
   height: 50%;
+  border-radius: 0.5rem;
   object-fit: cover;
+  bottom: 35%;
   z-index: 9;
 }
 @media screen and (max-width: 768px) {
@@ -399,30 +451,59 @@ aside.open {
 .note-worthy-project-card {
   background-color: #36363c;
   padding: 2rem;
-  height: 20rem;
+  border-radius: 0.5rem;
+  max-width: 30%;
+  height: fit-content;
+  margin: 0 1rem 1rem 0;
   position: relative;
   box-sizing: border-box;
 }
-.note-worthy-project-card .project-title {
-  font-size: 1.4rem;
-  color: #e7e7e7;
+@media screen and (max-width: 1024px) {
+  .note-worthy-project-card {
+    max-width: 45%;
+  }
+}
+@media screen and (max-width: 630px) {
+  .note-worthy-project-card {
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 .note-worthy-project-card .project-header {
+  height: 10%;
   display: flex;
   justify-content: space-between;
 }
 .note-worthy-project-card .project-header .icon {
   font-size: 2.4rem;
 }
-.note-worthy-project-card .project-description {
+.note-worthy-project-card .project-content {
+  height: 70%;
+  margin-bottom: 1rem;
+}
+.note-worthy-project-card .project-content .project-title {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #e7e7e7;
+}
+.note-worthy-project-card .project-content .project-description {
   font-size: 1rem;
   color: #777777;
 }
-.note-worthy-project-card .project-tags {
+.note-worthy-project-card .project-footer {
+  height: 20%;
+}
+.note-worthy-project-card .project-footer .project-tags {
   font-size: 1rem;
   color: #777777;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+}
+.note-worthy-project-card .project-footer .project-tags .project-tag {
+  margin-right: 0.25rem;
+}
+.note-worthy-project-card .project-footer .project-tags .project-tag:last-child {
+  margin-right: 0;
 }
 .note-worthy-project-card:hover {
   transition: all 0.5s ease-in-out;
@@ -430,6 +511,9 @@ aside.open {
 }
 .note-worthy-project-card:hover .project-title {
   color: #007bff;
+}
+.note-worthy-project-card:last-child {
+  margin-right: 0;
 }
 
 #note-worthy-projects {
@@ -441,21 +525,10 @@ aside.open {
   color: #e7e7e7;
   margin-bottom: 2rem;
 }
-#note-worthy-projects .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-gap: 1rem;
+#note-worthy-projects .projects-flex-container {
+  display: flex;
   width: 100%;
-}
-@media screen and (max-width: 768px) {
-  #note-worthy-projects .projects-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media screen and (max-width: 480px) {
-  #note-worthy-projects .projects-grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,17 +1,24 @@
 .note-worthy-project-card {
     background-color: _palette(surface);
     padding: _size(padding);
-    height: 20rem;
+    border-radius: _misc(border-radius);
+    max-width: 30%;
+    height: fit-content;
+    margin: 0 _size(element-margin-small) _size(element-margin-small) 0;
     position: relative;
     box-sizing: border-box;
 
+    @include desktop {
+        max-width: 45%;
+    }
 
-    .project-title {
-        font-size: _font(body-large);
-        color: _palette(text-accent);
+    @include weird-medium {
+        max-width: 100%;
+        margin-right: 0;
     }
 
     .project-header {
+        height: 10%;
         display: flex;
         justify-content: space-between;
 
@@ -21,17 +28,42 @@
         }
     }
 
-    .project-description {
-        font-size: _font(body-small);
-        color: _palette(text-secondary);
+    .project-content {
+        height: 70%;
+        margin-bottom: _size(element-margin-small);
+
+        .project-title {
+            margin-bottom: _size(element-margin-small);
+            font-size: _font(body-large);
+            color: _palette(text-accent);
+        }
+
+        .project-description {
+            font-size: _font(body-small);
+            color: _palette(text-secondary);
+        }
     }
 
-    .project-tags {
-        font-size: _font(body-small);
-        color: _palette(text-secondary);
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .project-footer {
+        height: 20%;
+
+        .project-tags {
+            font-size: _font(body-small);
+            color: _palette(text-secondary);
+            display: flex;
+            flex-wrap: wrap;
+
+            .project-tag {
+                margin-right: _size(element-margin-extra-small);
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
     }
+
 
 
     &:hover {
@@ -40,6 +72,10 @@
         .project-title {
             color: _palette(primary);
         }
+    }
+
+    &:last-child {
+        margin-right: 0;
     }
 }
 
@@ -53,18 +89,10 @@
         margin-bottom: _size(element-margin);
     }
 
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-gap: 1rem;
+    .projects-flex-container {
+        display: flex;
         width: 100%;
+        flex-wrap: wrap;
 
-        @include tablet {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        @include mobile {
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-        }
     }
 }

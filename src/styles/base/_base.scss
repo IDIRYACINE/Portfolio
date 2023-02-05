@@ -26,10 +26,10 @@ ul {
 }
 
 #main {
-    padding: _size(padding) * 4;
+    padding: _size(padding) * 2;
 
-    @include tablet {
-        padding: _size(padding) * 2;
+    @include weird-medium {
+        padding: _size(padding);
     }
 
 }

@@ -9,9 +9,9 @@ interface ProjectLibrary {
 interface Project{
     name: string;
     previewImage: string;
-    previewDescription: string;
+    previewDescription: string[];
     images: string[];
-    description: string;
+    description: string[];
     tags: string[];
     actions : ProjectAction[];
 }

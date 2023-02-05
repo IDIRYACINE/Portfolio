@@ -57,7 +57,7 @@
     width: _size(padding) * 1.5;
     z-index: 99;
 
-    @include mobile {
+    @include weird-medium {
         display: none;
     }
 
@@ -93,7 +93,7 @@
     width: _size(padding) * 1.5;
     z-index: 99;
 
-    @include mobile {
+    @include weird-medium {
         display: none;
     }
 

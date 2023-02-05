@@ -82,3 +82,11 @@
 @function _size($keys...) {
 	@return val($size, $keys...);
 }
+
+
+/// Gets a misc value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _misc($keys...) {
+	@return val($misc, $keys...);
+}

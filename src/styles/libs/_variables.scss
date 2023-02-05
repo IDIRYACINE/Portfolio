@@ -54,8 +54,13 @@ $font :(body-small : 1rem,
     headline-large : 2.4rem,
 );
 
-$size :(element-height: 3rem,
+$size :(
+    element-height: 3rem,
     element-margin: 2rem,
+    element-margin-small: 1rem,
+    element-margin-large: 3rem,
+    element-margin-extra-small: 0.25rem,
+
     padding: 2rem,
     wrapper: 72rem,
     button-padding: 1rem,
@@ -69,4 +74,8 @@ $size :(element-height: 3rem,
     featured-project-card-height: 25rem,
 );
 
-$duration :(transition : 2s)
+$duration :(transition : 2s);
+
+$misc: (
+    border-radius: 0.5rem,
+);

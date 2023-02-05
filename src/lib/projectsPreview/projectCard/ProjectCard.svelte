@@ -31,20 +31,32 @@
 		class:rightPosition={positionOverviewToRight}
 		class:leftPosition={positionOverviewToLeft}
 	>
-		<p class="featured-project-label">featured project</p>
-		<p class="featured-project-title">
-			{project.name}
-		</p>
-
-		<p class="featured-project-description">
-			{project.previewDescription}
-		</p>
-
-		<div class="project-tags" />
-		<div class="project-actions">
-			{#each project.actions as action}
-				<CardAction {action} />
+		<div class="featured-project-header">
+			<p class="featured-project-label">featured project</p>
+			<p class="featured-project-title">
+				{project.name}
+			</p>
+		</div>
+		<div class="featured-project-content">
+			
+			{#each project.previewDescription as paragraph}
+			<p class="featured-project-paragraph">
+				{paragraph}
+			</p>
 			{/each}
+			
+		</div>
+		<div class="featured-project-footer">
+			<div class="featured-project-tags">
+				{#each project.tags as tag}
+					<span class="featured-project-tag">{tag}</span>
+				{/each}
+			</div>
+			<div class="featured-project-actions">
+				{#each project.actions as action}
+					<CardAction {action} />
+				{/each}
+			</div>
 		</div>
 	</div>
 

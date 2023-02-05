@@ -8,7 +8,7 @@
 <div id="note-worthy-projects">
     <p class="section-title">Note Worthy Projects</p>
 
-    <div class="projects-grid">
+    <div class="projects-flex-container">
         {#each projectsLibrary.noteWorthy as project}
             <ProjectCard project={project} />
         {/each}
