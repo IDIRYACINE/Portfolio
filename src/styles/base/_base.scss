@@ -37,6 +37,8 @@ ul {
 .action {
     border: 0.1rem solid _palette(primary);
     padding: _size(button-padding);
+    color: _palette(primary);
+    border-radius: _misc(border-radius);
 
     &:hover {
         background-color: _palette(accent);
@@ -52,14 +54,6 @@ ul {
     height: 100vh;
 }
 
-aside {
-    right: -100%;
-    transition: right 0.3s ease-in-out;
-
-    &.open {
-        right: 0;
-    }
-}
 
 .fade-wrapper{
     opacity: 0;

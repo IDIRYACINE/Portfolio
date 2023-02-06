@@ -1,31 +1,18 @@
 <script lang="ts">
-	
-
-    export let profile:Profile ;
-
-    
+	export let profile: Profile;
 </script>
 
+<div id="contact">
+	<p class="title">What's next</p>
+	<h1>Get In Touch</h1>
 
-<div id="footer">
-    <section class="split contact">
-        <section>
-            <h3>Phone</h3>
-            <p><a id="phone">{profile.phone}</a></p>
-        </section>
-        <section>
-            <h3>Email</h3>
-            <p><a id="emai">{profile.secondaryEmail}</a></p>
-        </section>
-        <section>
-            <h3>Social</h3>
-            <ul class="icons alt">
-                <li><a href="{profile.facebook}" class="icon brands alt fa-facebook-f"><span
-                            class="label">Facebook</span></a></li>
-                <li><a href="{profile.github}" class="icon brands alt fa-github"><span
-                            class="label">GitHub</span></a></li>
-            </ul>
-        </section>
-    </section>
+	<p class="content">
+		Although I’m not currently looking for any new opportunities, my inbox is always open. Whether
+		you have a question or just want to say hi, I’ll try my best to get back to you!
+	</p>
+
+    <a href={`mailto:${profile.email}`} class="action">
+        Contact Me
+    </a>
+
 </div>
-

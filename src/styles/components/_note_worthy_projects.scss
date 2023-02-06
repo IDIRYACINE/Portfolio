@@ -2,23 +2,10 @@
     background-color: _palette(surface);
     padding: _size(padding);
     border-radius: _misc(border-radius);
-    max-width: 30%;
+    max-width: 100%;
     height: fit-content;
-    margin: 0 _size(element-margin-small) _size(element-margin-small) 0;
     position: relative;
     box-sizing: border-box;
-
-   
-
-
-    @include desktop {
-        max-width: 45%;
-    }
-
-    @include weird-medium {
-        max-width: 100%;
-        margin-right: 0;
-    }
 
     .project-header {
         height: 10%;
@@ -83,7 +70,7 @@
 
 #note-worthy-projects {
     width: 100%;
-   
+
 
     .section-title {
         text-align: center;
@@ -96,6 +83,20 @@
         display: flex;
         width: 100%;
         flex-wrap: wrap;
+    }
 
+    .fade-wrapper-container {
+        max-width: 30%;
+        height: fit-content;
+        margin: 0 _size(element-margin-small) _size(element-margin-small) 0;
+
+        @include desktop {
+            max-width: 45%;
+        }
+
+        @include weird-medium {
+            max-width: 100%;
+            margin-right: 0;
+        }
     }
 }

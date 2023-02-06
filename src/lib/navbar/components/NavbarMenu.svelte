@@ -38,6 +38,6 @@
 
 <button
 	on:click={(e) => toggleMenu(e.currentTarget)}
-	class="icon alt-2 fa-bars mr-2 mt-2"
+	class="nav-menu icon alt-2 fa-bars mr-2 mt-2"
 	class:open
 />

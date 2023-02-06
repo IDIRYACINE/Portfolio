@@ -28,15 +28,17 @@
 </script>
 
 {#if isLoaded}
-	<Navbar {profile} />
-
+<Navbar {profile} />
 	<div id="main">
 		<FadeInWidget><AboutIntro {profile} /></FadeInWidget>
 
 		<FadeInWidget><About {profile} /></FadeInWidget>
 		<FadeInWidget><ProjectsPreview {projectsLibrary} /></FadeInWidget>
 		<FadeInWidget><NoteWorthyProjects {projectsLibrary} /></FadeInWidget>
-		<Copyright {profile} />
+		<FadeInWidget>
+			<Contact {profile} />
+			<Copyright {profile} />
+		</FadeInWidget>
 	</div>
 {:else}
 	<Intro />

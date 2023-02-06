@@ -1,16 +1,18 @@
 <script lang="ts">
-	import ProjectCard from "./Components/ProjectCard.svelte";
+	import FadeInWidget from '$lib/utilityWidgets/FadeInWidget.svelte';
+	import ProjectCard from './Components/ProjectCard.svelte';
 
-    export let projectsLibrary:ProjectLibrary;
+	export let projectsLibrary: ProjectLibrary;
 </script>
 
-
 <div id="note-worthy-projects">
-    <p class="section-title">Note Worthy Projects</p>
+	<p class="section-title">Note Worthy Projects</p>
 
-    <div class="projects-flex-container">
-        {#each projectsLibrary.noteWorthy as project}
-            <ProjectCard project={project} />
-        {/each}
-    </div>
+	<div class="projects-flex-container">
+		{#each projectsLibrary.noteWorthy as project}
+			<FadeInWidget>
+				<ProjectCard {project} /></FadeInWidget
+			>
+		{/each}
+	</div>
 </div>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { smallSizeScreenWidth } from '$lib/utility/Constans';
-	import { onMount } from 'svelte';
 	import NavbarContent from './components/NavbarContent.svelte';
 	import NavbarMenu from './components/NavbarMenu.svelte';
 
@@ -15,12 +14,14 @@
 
 <svelte:window bind:innerWidth />
 
-<nav id="nav">
+<nav id="nav-holder">
+	<div id="nav">
 	{#if !smallScreen}
 	<NavbarContent/>
 	{:else }
 	<NavbarMenu/>
 	{/if}
+	</div>
 </nav>
 
 <div id="left-socials">
@@ -43,5 +44,5 @@
 </div>
 
 <div id="right-socials">
-	<a href="#s" class="link">{profile.email}</a>
+	<a href={`mailto:${profile.email}`} class="link">{profile.email}</a>
 </div>

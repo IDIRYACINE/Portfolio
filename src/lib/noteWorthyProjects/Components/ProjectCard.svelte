@@ -1,4 +1,7 @@
 <script lang="ts">
+	import FadeInWidget from "$lib/utilityWidgets/FadeInWidget.svelte";
+
+
 	export let project: Project;
 </script>
 

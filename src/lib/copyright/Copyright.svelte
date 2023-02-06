@@ -3,7 +3,23 @@
 </script>
 
 <div id="copyright" >
-    <ul>
-        <li>&copy; {profile.name}</li>
+    <ul class="icons socials">
+		<li>
+			<a href={profile.facebook} class="icon alt fa-file"><span class="label">Resume</span></a>
+		</li>
+		<li>
+			<a href={profile.github} class="icon brands alt fa-github"
+				><span class="label">GitHub</span></a
+			>
+		</li>
+		<li>
+			<a href={profile.facebook} class="icon brands alt fa-facebook-f"
+				><span class="label">Facebook</span></a
+			>
+		</li>
+	</ul>
+    <ul class="copyright-footer">
+        <li>Designed & Built By {profile.name}</li>
+        <li><a href="https://brittanychiang.com/">Inspired By Brittany Chiang</a></li>
     </ul>
 </div>

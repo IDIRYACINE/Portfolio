@@ -100,6 +100,8 @@ ul {
 .action {
   border: 0.1rem solid #007bff;
   padding: 1rem;
+  color: #007bff;
+  border-radius: 0.5rem;
 }
 .action:hover {
   background-color: rgba(0, 191, 255, 0.1725490196);
@@ -114,14 +116,6 @@ ul {
   height: 100vh;
 }
 
-aside {
-  right: -100%;
-  transition: right 0.3s ease-in-out;
-}
-aside.open {
-  right: 0;
-}
-
 .fade-wrapper {
   opacity: 0;
   transform: translateY(100%);
@@ -132,25 +126,41 @@ aside.open {
   opacity: 1;
 }
 
-#nav {
-  display: flex;
-  flex-direction: row;
+#nav-holder {
+  position: fixed;
   right: 0;
   top: 0;
-  justify-content: flex-end;
+  width: 100%;
+  z-index: 20;
 }
-#nav ul {
+#nav-holder #nav {
+  position: relative;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0.4rem;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
-@media screen and (max-width: 480px) {
-  #nav ul {
+@media screen and (max-width: 768px) {
+  #nav-holder #nav {
+    padding: 0;
+    background: transparent;
+    box-shadow: 0 0 0 transparent;
+    backdrop-filter: blur(0px);
+  }
+  #nav-holder #nav ul {
     flex-direction: column;
     align-items: center;
   }
 }
-#nav ul.links {
+#nav-holder #nav ul {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+#nav-holder #nav ul.links {
   max-width: 50vw;
   letter-spacing: 0.075em;
   list-style: none;
@@ -162,7 +172,7 @@ aside.open {
   text-transform: uppercase;
 }
 @media screen and (max-width: 768px) {
-  #nav ul.links {
+  #nav-holder #nav ul.links {
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-evenly;
@@ -170,10 +180,24 @@ aside.open {
     min-width: 100vw;
   }
 }
-#nav ul li a:hover {
+#nav-holder #nav ul li a:hover {
   transition: all 0.5 ease-in-out;
   color: #007bff;
   border-color: #007bff;
+}
+#nav-holder #nav .nav-menu {
+  z-index: 22;
+}
+#nav-holder #nav aside {
+  position: absolute;
+  top: 0%;
+  right: -100%;
+  height: 100vh;
+  transition: right 0.3s ease-in-out;
+  z-index: 21;
+}
+#nav-holder #nav aside.open {
+  right: 0;
 }
 
 #left-socials {
@@ -184,7 +208,7 @@ aside.open {
   left: 0;
   position: fixed;
   width: 3rem;
-  z-index: 99;
+  z-index: 10;
 }
 @media screen and (max-width: 630px) {
   #left-socials {
@@ -195,6 +219,7 @@ aside.open {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #444452;
 }
 #left-socials ul::after {
   content: "";
@@ -210,10 +235,11 @@ aside.open {
   position: fixed;
   bottom: 0;
   right: 0;
+  color: #444452;
   align-items: center;
   position: fixed;
   width: 3rem;
-  z-index: 99;
+  z-index: 10;
 }
 @media screen and (max-width: 630px) {
   #right-socials {
@@ -252,29 +278,54 @@ aside.open {
     transform: rotate(360deg);
   }
 }
-#footer {
-  background-color: #36363c;
-  padding: 1rem 0;
-  font-size: 0.8rem;
-  align-items: flex-start;
-}
-#footer > section section {
-  padding-left: 2rem;
+#contact {
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+  height: fit-content;
 }
-#footer a {
+#contact .title {
   font-size: 1rem;
+  color: #007bff;
 }
-#footer h3 {
-  margin-right: 4rem;
-  margin-bottom: 0.5rem;
+#contact h1 {
+  font-size: 2rem;
+  color: #e7e7e7;
+}
+#contact .content {
+  font-size: 1rem;
+  color: #444452;
+}
+#contact .action {
+  margin-top: 2rem;
 }
 
 #copyright {
-  position: absolute;
-  bottom: 10;
+  position: initial;
+  bottom: 0%;
+  color: #444452;
+  margin-bottom: 0.5rem;
+}
+#copyright ul {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+#copyright .socials {
+  display: flex;
+  flex-direction: row;
+  visibility: hidden;
+}
+@media screen and (max-width: 630px) {
+  #copyright .socials {
+    visibility: visible;
+  }
+}
+#copyright .copyright-footer:hover {
+  color: #007bff;
 }
 
 #about-intro {
@@ -483,22 +534,10 @@ aside.open {
   background-color: #36363c;
   padding: 2rem;
   border-radius: 0.5rem;
-  max-width: 30%;
+  max-width: 100%;
   height: fit-content;
-  margin: 0 1rem 1rem 0;
   position: relative;
   box-sizing: border-box;
-}
-@media screen and (max-width: 1024px) {
-  .note-worthy-project-card {
-    max-width: 45%;
-  }
-}
-@media screen and (max-width: 630px) {
-  .note-worthy-project-card {
-    max-width: 100%;
-    margin-right: 0;
-  }
 }
 .note-worthy-project-card .project-header {
   height: 10%;
@@ -560,6 +599,22 @@ aside.open {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+}
+#note-worthy-projects .fade-wrapper-container {
+  max-width: 30%;
+  height: fit-content;
+  margin: 0 1rem 1rem 0;
+}
+@media screen and (max-width: 1024px) {
+  #note-worthy-projects .fade-wrapper-container {
+    max-width: 45%;
+  }
+}
+@media screen and (max-width: 630px) {
+  #note-worthy-projects .fade-wrapper-container {
+    max-width: 100%;
+    margin-right: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

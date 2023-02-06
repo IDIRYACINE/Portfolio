@@ -23,7 +23,7 @@
 
 </script>
 
-<div use:inview={options}  on:enter={handleChange}>
+<div class="fade-wrapper-container" use:inview={options}  on:enter={handleChange}>
 	<div bind:this={el} class="fade-wrapper">
 		<slot/>
 	</div>
