@@ -10,7 +10,6 @@
         flex-direction: row;
         font-size: _font(headline-small);
         color: _palette(text-accent);
-        margin-bottom: _size(element-margin);
         width: 100%;
         flex: 2;
         align-items: center;
@@ -27,6 +26,16 @@
 
     .section-content {
         width: 100%;
+        align-items: flex-start;
+    
+        .fade-wrapper-container{
+            height: fit-content;
+            .fade-wrapper{
+                display: flex;
+                justify-content: flex-start;
+                height: fit-content;
+            }
+        }
     }
 
     .section-paragraph {

@@ -71,6 +71,9 @@
 #note-worthy-projects {
     width: 100%;
 
+    @include tablet{
+        margin-top: _size(element-margin);
+    }
 
     .section-title {
         text-align: center;
@@ -88,7 +91,7 @@
     .fade-wrapper-container {
         max-width: 30%;
         height: fit-content;
-        margin: 0 _size(element-margin-small) _size(element-margin-small) 0;
+        margin: 0 _size(element-margin-small) 0 0;
 
         @include desktop {
             max-width: 45%;

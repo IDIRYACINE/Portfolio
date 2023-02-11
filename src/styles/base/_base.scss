@@ -1,6 +1,10 @@
 html {
     background-color: _palette(background);
+    font-family: $Apercu;
+    line-height: 1;
 }
+
+
 
 body {
     overflow-y: auto;
@@ -35,6 +39,7 @@ ul {
 }
 
 .action {
+    max-height: 2rem;
     border: 0.1rem solid _palette(primary);
     padding: _size(button-padding);
     color: _palette(primary);
@@ -55,14 +60,13 @@ ul {
 }
 
 
-.fade-wrapper{
+.fade-wrapper {
     opacity: 0;
     transform: translateY(100%);
 
-    &.visible{
+    &.visible {
         transition: all 2s ease-in-out;
         transform: translateY(0%);
         opacity: 1;
     }
 }
-

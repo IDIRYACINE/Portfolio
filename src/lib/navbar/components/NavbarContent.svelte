@@ -9,9 +9,9 @@
 </script>
 
 <ul class="links">
-	<li><a href="#about-intro" on:click={e => handleClick(e)}>About</a></li>
-	<li><a href="#skills">Skills</a></li>
-	<li><a href="#projects">Projects</a></li>
-	<li><a href="#education">Education</a></li>
-	<li><a href="#footer">Contact</a></li>
+	<li><a href="#about-me" on:click={e => handleClick(e)}>About</a></li>
+	<li><a href="#skills">Experiance</a></li>
+	<li><a href="#featured-projects">Work</a></li>
+	<li><a href="#contact">Contact</a></li>
+	<li><a class="action" href="#resume">Resume</a></li>
 </ul>

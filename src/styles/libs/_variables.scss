@@ -47,7 +47,9 @@ $palette :(background : $night,
     filter-color : $green,
 );
 
-$font :(body-small : 1rem,
+$font :(
+    body-small-extra : 0.8rem,
+    body-small : 1rem,
     body-meduim : 1.2rem,
     body-large : 1.4rem,
     headline-small : 1.6rem,
@@ -81,3 +83,4 @@ $duration :(transition : 2s);
 $misc: (
     border-radius: 0.5rem,
 );
+
