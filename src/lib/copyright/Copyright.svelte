@@ -20,6 +20,5 @@
 	</ul>
     <ul class="copyright-footer">
         <li>Designed & Built By {profile.name}</li>
-        <li><a href="https://brittanychiang.com/">Inspired By Brittany Chiang</a></li>
     </ul>
 </div>

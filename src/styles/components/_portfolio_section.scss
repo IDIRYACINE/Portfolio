@@ -17,8 +17,9 @@
         &::after {
             content: '';
             flex: 1;
-            padding-left: _size(escape-horizontal);
+            margin-left:  _size(escape-horizontal) / 2;
             vertical-align: middle;
+            width: 2rem;
             height: 0.1rem;
             background-color: _palette(seperator);
         }

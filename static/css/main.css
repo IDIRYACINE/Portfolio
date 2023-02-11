@@ -351,55 +351,65 @@ ul {
     transform: rotate(360deg);
   }
 }
-#contact {
+#footer {
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+}
+#footer #contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  height: fit-content;
 }
-#contact .title {
+#footer #contact .title {
   font-size: 1rem;
   color: #007bff;
 }
-#contact h1 {
+#footer #contact h1 {
   font-size: 2rem;
   color: #e7e7e7;
 }
-#contact .content {
+#footer #contact .content {
   font-size: 1rem;
   color: #444452;
+  max-width: 60%;
 }
-#contact .action {
+@media screen and (max-width: 850px) {
+  #footer #contact .content {
+    max-width: 100%;
+  }
+}
+#footer #contact .action {
   margin-top: 1rem;
   max-height: 100%;
 }
-
-#copyright {
+#footer #copyright {
   position: initial;
   bottom: 0%;
   color: #444452;
   margin-bottom: 2rem;
 }
-#copyright ul {
+#footer #copyright ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#copyright .socials {
+#footer #copyright .socials {
   display: flex;
   flex-direction: row;
   visibility: hidden;
 }
 @media screen and (max-width: 630px) {
-  #copyright .socials {
+  #footer #copyright .socials {
     visibility: visible;
   }
 }
-#copyright .copyright-footer:hover {
+#footer #copyright .copyright-footer:hover {
   color: #007bff;
 }
 
@@ -410,9 +420,13 @@ ul {
   align-items: flex-start;
   justify-content: center;
 }
+#about-intro #pre-intro-title {
+  color: #007bff;
+}
 #about-intro #intro-title {
-  font-size: 2.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
+  color: #e7e7e7;
   margin-bottom: 1rem;
 }
 #about-intro #intro-description {
@@ -438,8 +452,9 @@ ul {
 .portfolio-section .section-title::after {
   content: "";
   flex: 1;
-  padding-left: 2rem;
+  margin-left: 1rem;
   vertical-align: middle;
+  width: 2rem;
   height: 0.1rem;
   background-color: #444452;
 }
@@ -468,14 +483,13 @@ ul {
 }
 @media screen and (max-width: 768px) {
   .project-card {
-    margin: 4rem 0 0 0;
+    margin: 2rem 0 0 0;
   }
 }
 .project-card .project-overview {
   position: absolute;
   height: 100%;
   width: 60%;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   z-index: 10;
@@ -488,9 +502,15 @@ ul {
   right: 0;
 }
 @media screen and (max-width: 768px) {
+  .project-card .project-overview.rightPosition {
+    direction: ltr;
+  }
+}
+@media screen and (max-width: 768px) {
   .project-card .project-overview {
     background-color: rgba(54, 54, 60, 0.9);
     border-radius: 0.5rem;
+    padding: 2rem;
     width: 100%;
   }
 }
@@ -553,6 +573,11 @@ ul {
   direction: rtl;
   right: 0;
 }
+@media screen and (max-width: 768px) {
+  .project-card .project-overview .featured-project-footer.rightPosition {
+    direction: ltr;
+  }
+}
 .project-card .project-overview .featured-project-footer .featured-project-tags {
   display: flex;
   flex-wrap: wrap;
@@ -591,6 +616,11 @@ ul {
 .project-card .featured-img-container.rightPosition {
   direction: rtl;
   right: 0;
+}
+@media screen and (max-width: 768px) {
+  .project-card .featured-img-container.rightPosition {
+    direction: ltr;
+  }
 }
 .project-card .featured-img-container .image-filter {
   position: absolute;
@@ -686,27 +716,37 @@ ul {
   text-align: center;
   font-size: 1.6rem;
   color: #e7e7e7;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 #note-worthy-projects .projects-flex-container {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 #note-worthy-projects .fade-wrapper-container {
-  max-width: 30%;
+  max-width: 32%;
   height: fit-content;
-  margin: 0 1rem 0 0;
+  margin-top: 1rem;
 }
 @media screen and (max-width: 1024px) {
   #note-worthy-projects .fade-wrapper-container {
-    max-width: 45%;
+    max-width: 50%;
+    padding-right: 0.5rem;
+  }
+  #note-worthy-projects .fade-wrapper-container:nth-child(2n) {
+    padding-right: 0;
+    padding-left: 0.5rem;
   }
 }
 @media screen and (max-width: 630px) {
   #note-worthy-projects .fade-wrapper-container {
     max-width: 100%;
-    margin-right: 0;
+    padding-right: 0;
+  }
+  #note-worthy-projects .fade-wrapper-container:nth-child(2n) {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 

@@ -6,14 +6,13 @@
     height: _size(featured-project-card-height);
 
    @include tablet {
-        margin:(_size(element-margin) * 2) 0 0 0;
+        margin:(_size(element-margin) ) 0 0 0;
     }
 
     .project-overview {
         position: absolute;
         height: 100%;
         width: _size(featured-project-overview-width);
-        padding: _size(padding);
         display: flex;
         flex-direction: column;
         z-index: 10;
@@ -22,6 +21,7 @@
         @include tablet {
             background-color: _palette(surface-transparent);
             border-radius: _misc(border-radius);
+            padding: _size(padding);
             width: 100%;
         }
 

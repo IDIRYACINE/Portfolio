@@ -101,6 +101,9 @@
   &.rightPosition {
     direction: rtl;
     right: 0;
+    @include tablet {
+      direction: ltr;
+    }
   }
 }
 

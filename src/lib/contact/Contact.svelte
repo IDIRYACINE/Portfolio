@@ -1,8 +1,12 @@
 <script lang="ts">
+	import Copyright from "$lib/copyright/Copyright.svelte";
+
+
 	export let profile: Profile;
 </script>
 
-<div id="contact">
+<div id="footer">
+	<div id="contact">
 	<p class="title">What's next</p>
 	<h1>Get In Touch</h1>
 
@@ -14,5 +18,9 @@
     <a href={`mailto:${profile.email}`} class="action">
         Contact Me
     </a>
+	</div>
+	
+	<Copyright {profile} />
+
 
 </div>

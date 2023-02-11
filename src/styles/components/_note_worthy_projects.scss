@@ -79,27 +79,40 @@
         text-align: center;
         font-size: _font(headline-small);
         color: _palette(text-accent);
-        margin-bottom: _size(element-margin);
+        margin-bottom: _size(element-margin) / 2;
     }
 
     .projects-flex-container {
         display: flex;
         width: 100%;
         flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .fade-wrapper-container {
-        max-width: 30%;
+        max-width: 32%;
         height: fit-content;
-        margin: 0 _size(element-margin-small) 0 0;
-
+        margin-top: _size(element-margin) / 2;
+        
+      
         @include desktop {
-            max-width: 45%;
+            max-width: 50%;
+            padding-right: _size(element-margin) / 4;
+            &:nth-child(2n){
+                padding-right: 0;
+                padding-left: _size(element-margin) / 4;
+            }
         }
 
-        @include weird-medium {
+        @include weird-medium{
             max-width: 100%;
-            margin-right: 0;
+            padding-right: 0;
+
+            &:nth-child(2n){
+                padding-right: 0;
+                padding-left: 0;
+            }
         }
+
     }
 }

@@ -4,14 +4,11 @@
 	import { loadProjects } from '$lib/utility/StaticDataLoader';
 
 	import Contact from '$lib/contact/Contact.svelte';
-	import Education from '$lib/education/Education.svelte';
 	import ProjectsPreview from '$lib/projectsPreview/ProjectsPreview.svelte';
-	import Skills from '$lib/skills/Skills.svelte';
 	import AboutIntro from '$lib/about/AboutIntro.svelte';
 	import About from '$lib/about/About.svelte';
 	import Intro from '$lib/intro/Intro.svelte';
 	import Navbar from '$lib/navbar/Navbar.svelte';
-	import Copyright from '$lib/copyright/Copyright.svelte';
 	import NoteWorthyProjects from '$lib/noteWorthyProjects/NoteWorthyProjects.svelte';
 	import FadeInWidget from '$lib/utilityWidgets/FadeInWidget.svelte';
 
@@ -37,7 +34,6 @@
 		<FadeInWidget><NoteWorthyProjects {projectsLibrary} /></FadeInWidget>
 		<FadeInWidget>
 			<Contact {profile} />
-			<Copyright {profile} />
 		</FadeInWidget>
 	</div>
 {:else}
