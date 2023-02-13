@@ -5,6 +5,7 @@ interface Skill{
 }
 
 interface SkillLibrary{
+    skillsTitles : string[];
     languages: Skill[];
     frameworks: Skill[];
     databases: Skill[];

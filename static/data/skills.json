@@ -1,4 +1,5 @@
 {
+    "skillsTitles" : ["Languages","Frameworks","Databases"],
     "languages":[
         {
             "name" : "Java",

@@ -185,6 +185,63 @@ ul {
   opacity: 1;
 }
 
+#experience {
+  height: 100%;
+}
+#experience .section-title {
+  margin-bottom: 2rem;
+}
+#experience .section-content {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 630px) {
+  #experience .section-content {
+    flex-direction: column;
+  }
+}
+#experience .section-content .experience-content {
+  margin-left: 1rem;
+}
+@media screen and (max-width: 630px) {
+  #experience .section-content .experience-content {
+    margin-left: 0;
+  }
+}
+#experience .section-content .experience-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media screen and (max-width: 630px) {
+  #experience .section-content .experience-tab {
+    flex-direction: row;
+  }
+}
+#experience .section-content .experience-tab .experience-title {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 7rem;
+  height: 2.5rem;
+  padding: 0.2rem;
+  border-left: 0.15rem solid #444452;
+}
+@media screen and (max-width: 630px) {
+  #experience .section-content .experience-tab .experience-title {
+    border-left: 0;
+    border-bottom: 0.15rem solid #444452;
+  }
+}
+#experience .section-content .experience-tab .experience-title:hover {
+  color: #007bff;
+  background-color: rgba(0, 191, 255, 0.1725490196);
+}
+#experience .section-content .experience-tab .experience-title.selected {
+  border-color: #007bff;
+  color: #007bff;
+}
+
 #nav-holder {
   position: fixed;
   right: 0;

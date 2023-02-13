@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { loadProfile } from '../lib/utility/StaticDataLoader';
+	import { loadProfile, loadSkills } from '../lib/utility/StaticDataLoader';
 	import { loadProjects } from '$lib/utility/StaticDataLoader';
 
 	import Contact from '$lib/contact/Contact.svelte';
@@ -11,15 +11,18 @@
 	import Navbar from '$lib/navbar/Navbar.svelte';
 	import NoteWorthyProjects from '$lib/noteWorthyProjects/NoteWorthyProjects.svelte';
 	import FadeInWidget from '$lib/utilityWidgets/FadeInWidget.svelte';
+	import Experience from '$lib/experience/Experience.svelte';
 
 	let profile: Profile;
 	let projectsLibrary: ProjectLibrary;
+	let skillsLibrary : SkillLibrary;
 
 	$: isLoaded = false;
 
 	onMount(async () => {
 		profile = await loadProfile();
 		projectsLibrary = await loadProjects();
+		skillsLibrary = await loadSkills();
 		isLoaded = true;
 	});
 </script>
@@ -30,6 +33,7 @@
 		<FadeInWidget><AboutIntro {profile} /></FadeInWidget>
 
 		<FadeInWidget><About {profile} /></FadeInWidget>
+		<FadeInWidget><Experience {skillsLibrary}></Experience></FadeInWidget>
 		<FadeInWidget><ProjectsPreview {projectsLibrary} /></FadeInWidget>
 		<FadeInWidget><NoteWorthyProjects {projectsLibrary} /></FadeInWidget>
 		<FadeInWidget>
