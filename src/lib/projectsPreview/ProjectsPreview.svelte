@@ -21,9 +21,9 @@
 		{#each range(0, projectsLibrary.projects.length,1) as index}
 			<FadeInWidget>
 			{#if index % 2 === 0}
-				<ProjectCard project={getProject(index)} rightToLeftProject={false} />
-			{:else}
 				<ProjectCard project={getProject(index)} rightToLeftProject={true} />
+			{:else}
+				<ProjectCard project={getProject(index)} rightToLeftProject={false} />
 			{/if}
 		</FadeInWidget>
 		{/each}

@@ -2,6 +2,8 @@
 interface Skill{
     name: string;
     fontAwesomeClass: string;
+    institute: string;
+    year: string;
 }
 
 interface SkillLibrary{
@@ -9,4 +11,5 @@ interface SkillLibrary{
     languages: Skill[];
     frameworks: Skill[];
     databases: Skill[];
+    education: Skill[];
 }

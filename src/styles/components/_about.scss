@@ -1,25 +1,35 @@
-
-
-#about-intro{
+#about-intro {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     align-items: flex-start;
     justify-content: center;
 
-    #pre-intro-title{
+    #pre-intro-title {
         color: _palette(primary);
     }
-    #intro-title{
+
+    #intro-title {
         font-size: _font(headline-extra-large);
         font-weight: 700;
         color: _palette(text-accent);
         margin-bottom: 1rem;
     }
 
-    #intro-description{
+    #intro-description {
         font-size: _font(headline-meduim);
         color: _palette(onSurface);
         margin-bottom: 1rem;
     }
+}
+
+#about-me {
+    .section-paragraph {
+        max-width: 50%;
+
+        @include little-desktop {
+            max-width: 100%;
+        }
+    }
+
 }

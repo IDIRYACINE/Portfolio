@@ -5,22 +5,15 @@
 
 	export let skillsLibrary: SkillLibrary;
 
+    let contents = [skillsLibrary.languages, skillsLibrary.frameworks, skillsLibrary.databases,skillsLibrary.education]
+
     let selectedTab : number;
 
     experienceState.subscribe(value => {
         selectedTab = value.selectedTab;
     })
 
-	function getSectionContent(): Skill[] {
-        switch(selectedTab){
-            case 1 : 
-                return skillsLibrary.frameworks;
-            case 2 : 
-                return skillsLibrary.databases;    
-            default : 
-                return skillsLibrary.languages;
-        }
-	}
+	
 
 </script>
 
@@ -29,6 +22,6 @@
 
 	<div class="section-content">
 		<ExperienceTab titles={skillsLibrary.skillsTitles} />
-		<ExperienceContent content={getSectionContent()} />
+		<ExperienceContent content={contents[selectedTab]} />
 	</div>
 </div>

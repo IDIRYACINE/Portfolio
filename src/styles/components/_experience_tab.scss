@@ -1,22 +1,38 @@
 #experience {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-    .section-title {
-        margin-bottom: _size(padding);
+    .section-title{
+        margin-bottom: _size(element-margin);
     }
 
     .section-content {
         display: flex;
         flex-direction: row;
+        height: _size(featured-project-card-height);
 
         @include weird-medium {
             flex-direction: column;
+
         }
 
-        .experience-content{
-            margin-left: _size(escape-horizontal ) / 2;
-            @include weird-medium{
+        .experience-content {
+            margin-left: _size(escape-horizontal) / 2;
+
+            @include weird-medium {
                 margin-left: 0;
+            }
+
+            ul{
+                flex-direction: column;
+                .firstParagraph{
+                    &:before{
+                        content: "▹";
+                        color: _palette(primary);
+                        margin-right: _size(escape-horizontal) / 2;
+                    }
+                }
             }
         }
 
@@ -27,7 +43,7 @@
 
             @include weird-medium {
                 flex-direction: row;
-              
+                margin-bottom: _size(element-margin) / 2;
             }
 
             .experience-title {
@@ -41,7 +57,7 @@
 
                 border-left: _size(border-width) solid _palette(text-primary);
 
-                @include weird-medium{
+                @include weird-medium {
                     border-left: 0;
                     border-bottom: _size(border-width) solid _palette(text-primary);
                 }

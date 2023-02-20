@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import 'fontawesome-all.min.css';
 .icons {
   list-style: none;
@@ -61,6 +62,10 @@
 
 .alt-2.icon:before {
   font-size: 2rem;
+}
+
+.skills-icon:hover {
+  color: #007bff;
 }
 
 @font-face {
@@ -186,7 +191,9 @@ ul {
 }
 
 #experience {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 #experience .section-title {
   margin-bottom: 2rem;
@@ -194,6 +201,7 @@ ul {
 #experience .section-content {
   display: flex;
   flex-direction: row;
+  height: 25rem;
 }
 @media screen and (max-width: 630px) {
   #experience .section-content {
@@ -208,6 +216,14 @@ ul {
     margin-left: 0;
   }
 }
+#experience .section-content .experience-content ul {
+  flex-direction: column;
+}
+#experience .section-content .experience-content ul .firstParagraph:before {
+  content: "▹";
+  color: #007bff;
+  margin-right: 1rem;
+}
 #experience .section-content .experience-tab {
   display: flex;
   flex-direction: column;
@@ -216,6 +232,7 @@ ul {
 @media screen and (max-width: 630px) {
   #experience .section-content .experience-tab {
     flex-direction: row;
+    margin-bottom: 1rem;
   }
 }
 #experience .section-content .experience-tab .experience-title {
@@ -488,6 +505,15 @@ ul {
 }
 #about-intro #intro-description {
   margin-bottom: 1rem;
+}
+
+#about-me .section-paragraph {
+  max-width: 50%;
+}
+@media screen and (max-width: 850px) {
+  #about-me .section-paragraph {
+    max-width: 100%;
+  }
 }
 
 .portfolio-section {

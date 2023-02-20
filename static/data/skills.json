@@ -1,5 +1,5 @@
 {
-    "skillsTitles" : ["Languages","Frameworks","Databases"],
+    "skillsTitles" : ["Languages","Frameworks","Databases","Education"],
     "languages":[
         {
             "name" : "Java",
@@ -70,5 +70,18 @@
             "name" : "sqlite",
             "fontAwesomeClass" : "fas fa-database"
         }
+    ],
+    "education" : [
+        {
+            "name" : "Bachelor degree in computer science",
+            "institute" : "University of Al Bachir Ibrahimy",
+            "year" : " 2022"
+        },
+        {
+            "name" : "Masters degree in Computer Science",
+            "institute" : "University of Al Bachir Ibrahimy",
+            "year" : "2024"
+        }
+      
     ]
 }
