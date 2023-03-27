@@ -74,14 +74,14 @@
     ],
     "noteWorthy": [
         {
-            "name": "QRR Scanner",
+            "name": "Smart Home",
             "previewImage": "images/test-featured-project-bg.jpg",
-            "previewDescription": ["A mobile app for scanning qr and barcodes and posting them through a rest api. ","Various features are present like timestamps ,grouping, duplications."],
+            "previewDescription": ["A google home clone linked with arduino over mqtt protocol"],
             "description": [],
             "tags": [
-                "Kotlin",
-                "Sqlite",
-                "JetpackCompose"
+                "Flutter",
+                "Arduino",
+                "Mqtt"
             ],
             "images": [],
             "actions": [
@@ -93,14 +93,12 @@
             ]
         },
         {
-            "name": "QRR Scanner",
+            "name": "Progress Webetu",
             "previewImage": "images/test-featured-project-bg.jpg",
-            "previewDescription": ["A mobile app for scanning qr and barcodes and posting them through a rest api. ","Various features are present like timestamps ,grouping, duplications."],
+            "previewDescription": ["Reverse engineered and improved the webetu app"],
             "description": [],
             "tags": [
-                "Kotlin",
-                "Sqlite",
-                "JetpackCompose"
+                "Flutter"
             ],
             "images": [],
             "actions": [
@@ -112,21 +110,19 @@
             ]
         },
         {
-            "name": "QRR Scanner",
+            "name": "Higuruma bot",
             "previewImage": "images/test-featured-project-bg.jpg",
-            "previewDescription": ["A mobile app for scanning qr and barcodes and posting them through a rest api. ","Various features are present like timestamps ,grouping, duplications."],
+            "previewDescription": ["A discord bot for managing discussions in a discord server"],
             "description": [],
             "tags": [
-                "Kotlin",
-                "Sqlite",
-                "JetpackCompose"
+                "NodeJs"
             ],
             "images": [],
             "actions": [
                 {
-                    "name": "PlayStore",
-                    "icon": "fas fa-link",
-                    "link": ""
+                    "name": "Github",
+                    "icon": "brands fa-github",
+                    "link": "https://github.com/IDIRYACINE/higuruma-bot"
                 }
             ]
         }

@@ -3,7 +3,7 @@
     padding: _size(padding);
     border-radius: _misc(border-radius);
     max-width: 100%;
-    height: fit-content;
+    height: 20rem;
     position: relative;
     box-sizing: border-box;
 
@@ -79,7 +79,7 @@
         text-align: center;
         font-size: _font(headline-small);
         color: _palette(text-accent);
-        margin-bottom: _size(element-margin) / 2;
+        margin-bottom: calc(_size(element-margin) / 2);
     }
 
     .projects-flex-container {
@@ -92,15 +92,15 @@
     .fade-wrapper-container {
         max-width: 32%;
         height: fit-content;
-        margin-top: _size(element-margin) / 2;
+        margin-top: calc(_size(element-margin) / 2);
         
       
         @include desktop {
             max-width: 50%;
-            padding-right: _size(element-margin) / 4;
+            padding-right: calc(_size(element-margin) / 4);
             &:nth-child(2n){
                 padding-right: 0;
-                padding-left: _size(element-margin) / 4;
+                padding-left: calc(_size(element-margin) / 4);
             }
         }
 

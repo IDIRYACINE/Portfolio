@@ -1,27 +1,31 @@
 <script lang="ts">
-	import ExperienceContent from './components/ExperienceContent.svelte';
-	import ExperienceTab from './components/ExperienceTab.svelte';
+	import ExperienceCard from './components/ExperienceCard.svelte';
 	import { experienceState } from './states/experienceState';
 
 	export let skillsLibrary: SkillLibrary;
 
-    let contents = [skillsLibrary.languages, skillsLibrary.frameworks, skillsLibrary.databases,skillsLibrary.education]
+	let contents = [
+		skillsLibrary.languages,
+		skillsLibrary.frameworks,
+		skillsLibrary.databases,
+		skillsLibrary.education
+	];
 
-    let selectedTab : number;
+	let selectedTab: number;
 
-    experienceState.subscribe(value => {
-        selectedTab = value.selectedTab;
-    })
-
-	
-
+	experienceState.subscribe((value) => {
+		selectedTab = value.selectedTab;
+	});
 </script>
 
 <div id="experience" class="portfolio-section">
 	<p class="section-title">Experience</p>
 
 	<div class="section-content">
-		<ExperienceTab titles={skillsLibrary.skillsTitles} />
-		<ExperienceContent content={contents[selectedTab]} />
+		{#each contents as skill, index}
+			{#if index < 3}
+				<ExperienceCard title={skillsLibrary.skillsTitles[index]} content={skill} />
+			{/if}
+		{/each}
 	</div>
 </div>

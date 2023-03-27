@@ -33,7 +33,7 @@
         }
     
         .action{
-            margin-top: _size(element-margin) / 2;
+            margin-top: calc(_size(element-margin) / 2);
             max-height: 100%;
         }
     }
