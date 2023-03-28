@@ -1,4 +1,5 @@
 <script lang="ts">
+	import FadeInWidget from '$lib/utilityWidgets/FadeInWidget.svelte';
 	import ExperienceCard from './components/ExperienceCard.svelte';
 	import { experienceState } from './states/experienceState';
 
@@ -21,10 +22,12 @@
 <div id="experience" class="portfolio-section">
 	<p class="section-title">Experience</p>
 
-	<div class="section-content">
+	<div class="experiences-flex-container">
 		{#each contents as skill, index}
 			{#if index < 3}
-				<ExperienceCard title={skillsLibrary.skillsTitles[index]} content={skill} />
+				<FadeInWidget>
+					<ExperienceCard title={skillsLibrary.skillsTitles[index]} content={skill} />
+				</FadeInWidget>
 			{/if}
 		{/each}
 	</div>

@@ -5,10 +5,6 @@
     width: 100%;
     height: _size(featured-project-card-height);
 
-   @include tablet {
-        margin:(_size(element-margin) ) 0 0 0;
-    }
-
     .project-overview {
         position: absolute;
         height: 100%;
@@ -60,7 +56,7 @@
 
             @include tablet {
                 background-color: transparent;
-                padding: 0 ;
+                padding: 0;
                 width: 100%;
                 height: 100%;
                 justify-content: center;
@@ -164,4 +160,26 @@
 
 
 
+}
+
+#featured-projects {
+    margin: (_size(element-margin)) 0 0 0;
+
+    .section-content {
+        margin: (_size(element-margin)) 0 0 0;
+
+        .fade-wrapper-container {
+            @include tablet {
+                margin: (_size(element-margin)) 0 0 0;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+        }
+
+
+
+    }
 }

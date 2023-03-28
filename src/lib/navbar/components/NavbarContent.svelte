@@ -10,8 +10,8 @@
 
 <ul class="links">
 	<li><a href="#about-me" on:click={e => handleClick(e)}>About</a></li>
-	<li><a href="#skills">Experience</a></li>
-	<li><a href="#featured-projects">Work</a></li>
-	<li><a href="#contact">Contact</a></li>
+	<li><a href="#experience" on:click={e => handleClick(e)}>Experience</a></li>
+	<li><a href="#featured-projects" on:click={e => handleClick(e)}>Work</a></li>
+	<li><a href="#contact" on:click={e => handleClick(e)}>Contact</a></li>
 	<li><a class="action" href="/resume.pdf">Resume</a></li>
 </ul>
