@@ -105,6 +105,11 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
+                font-size: _font(body-large);
+
+                @include tablet {
+                    color:_palette(text-accent);
+                }
             }
         }
 

@@ -124,9 +124,10 @@
   font-style: italic;
 }
 html {
-  background-color: #171c28;
+  background-color: #1e2124;
   font-family: "Apercu", "Source Sans Pro", system, system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   line-height: 1;
+  color: #777777;
 }
 
 body {
@@ -230,7 +231,7 @@ ul {
 }
 
 .experience-card {
-  background-color: #36363c;
+  background-color: #282b30;
   padding: 2rem;
   border-radius: 0.5rem;
   width: 100%;
@@ -291,6 +292,7 @@ ul {
   z-index: 20;
   align-items: center;
   line-height: 1rem;
+  color: #1e2124;
   font-size: 0.8rem;
 }
 #nav-holder #nav {
@@ -472,7 +474,7 @@ ul {
 }
 #footer #contact .content {
   font-size: 1rem;
-  color: #444452;
+  color: #777777;
   max-width: 60%;
 }
 @media screen and (max-width: 850px) {
@@ -487,7 +489,7 @@ ul {
 #footer #copyright {
   position: initial;
   bottom: 0%;
-  color: #444452;
+  color: #777777;
   margin-bottom: 2rem;
 }
 #footer #copyright ul {
@@ -527,6 +529,7 @@ ul {
   margin-bottom: 1rem;
 }
 #about-intro #intro-description {
+  color: #777777;
   margin-bottom: 1rem;
 }
 
@@ -537,6 +540,21 @@ ul {
   #about-me .section-paragraph {
     max-width: 100%;
   }
+}
+#about-me #about-education {
+  color: #007bff;
+}
+#about-me #about-education h1 {
+  margin-bottom: 1rem;
+}
+#about-me #about-education ul {
+  color: #777777;
+  display: flex;
+  flex-direction: column;
+}
+#about-me #about-education ul li {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
 }
 
 .portfolio-section {
@@ -578,6 +596,7 @@ ul {
 }
 .portfolio-section .section-paragraph {
   margin-bottom: 2rem;
+  color: #777777;
 }
 
 .project-card {
@@ -638,7 +657,7 @@ ul {
   padding: 2rem;
   margin-bottom: 0.25rem;
   border-radius: 0.5rem;
-  background-color: #36363c;
+  background-color: #282b30;
   font-size: 1rem;
   color: #777777;
   overflow-y: hidden;
@@ -696,6 +715,12 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  font-size: 1.4rem;
+}
+@media screen and (max-width: 768px) {
+  .project-card .project-overview .featured-project-footer .featured-project-actions {
+    color: #e7e7e7;
+  }
 }
 .project-card .featured-img-container {
   position: absolute;
@@ -729,7 +754,7 @@ ul {
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: #171c28;
+  background-color: #1e2124;
   opacity: 0.75;
   transition: all 0.5s ease-in;
 }
@@ -765,7 +790,7 @@ ul {
 }
 
 .note-worthy-project-card {
-  background-color: #36363c;
+  background-color: #282b30;
   padding: 2rem;
   border-radius: 0.5rem;
   width: 100%;

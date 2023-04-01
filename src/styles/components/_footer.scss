@@ -24,7 +24,7 @@
     
         .content {
             font-size: _font(body-small);
-            color: _palette(text-primary);
+            color: _palette(onBackground);
             max-width: 60%;
     
             @include little-desktop{
@@ -43,7 +43,7 @@
 #copyright {
     position: initial;
     bottom: 0%;
-    color: _palette(text-primary);
+    color: _palette(onBackground);
     margin-bottom: _size(element-margin);
 
 

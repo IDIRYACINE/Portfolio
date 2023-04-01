@@ -1,6 +1,6 @@
-$night: #171c28;
+$night: #1e2124;
 $night-transparent: rgba(23, 28, 40, 0.9);
-$black: #36363c;
+$black: #282b30;
 $black-transparent: rgba(54, 54, 60, 0.9);
 $dark-grey: #444452;
 $grey: #777777;
@@ -34,8 +34,10 @@ $tiny-mobile-width: 330px;
 $fa-brands: 'Font Awesome 5 Brands';
 
 
-$palette :(background : $night,
+$palette :(
+    background : $night,
     surface : $black,
+    onBackground : $grey,
     text-primary : $dark-grey,
     text-accent : $off-white,
     text-secondary : $grey,

@@ -18,7 +18,7 @@
 
     #intro-description {
         font-size: _font(headline-meduim);
-        color: _palette(onSurface);
+        color: _palette(onBackground);
         margin-bottom: 1rem;
     }
 }
@@ -29,6 +29,26 @@
 
         @include little-desktop {
             max-width: 100%;
+        }
+    }
+
+    #about-education{
+        color : _palette(primary);
+
+        h1{
+            margin-bottom:  calc(_size(element-margin) / 2);
+        }
+
+        ul{
+            color : _palette(onBackground);
+            display: flex;
+            flex-direction: column;
+
+            li{
+                margin-left : _size(element-margin);
+                margin-bottom: calc(_size(element-margin) / 2);
+
+            }
         }
     }
 
