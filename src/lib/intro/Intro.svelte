@@ -1,7 +1,5 @@
 <script lang="ts"></script>
 
-
-
 <div id="intro">
-    <span class = "loading-intro fab fa-js"/>
+	<img class="rotate" id="loading-intro" src="logo.svg" alt="logo" />
 </div>

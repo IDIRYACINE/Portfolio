@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg 
+   id="logo"
+   width="174.96996mm"
+   height="172.28702mm"
+   viewBox="0 0 174.96996 172.28702"
+   version="1.1"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
+   sodipodi:docname="logo"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.49798681"
+     inkscape:cx="-45.181919"
+     inkscape:cy="172.69534"
+     inkscape:window-width="1366"
+     inkscape:window-height="695"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-10.90278,-39.245402)">
+    <path 
+       sodipodi:type="star"
+       style="fill:none;stroke-width:0.965;stroke:#000000;stroke-opacity:1;stroke-dasharray:none"
+       id="path111"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="48.348839"
+       sodipodi:cy="75.976738"
+       sodipodi:r1="92.529633"
+       sodipodi:r2="46.264816"
+       sodipodi:arg1="0.83414001"
+       sodipodi:arg2="1.4624585"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 110.51163,144.5152 53.351269,121.97031 2.3742484,156.27661 6.1521859,94.947128 -42.22781,57.06633 17.267443,41.707509 38.343981,-16.010412 71.336132,35.826799 132.74215,38.035961 93.637164,85.43194 Z"
+       inkscape:transform-center-x="3.0916715"
+       inkscape:transform-center-y="-5.8436385"
+       transform="translate(53.13059,55.255814)" 
+       class="logo-path"
+       />
+    <text 
+       xml:space="preserve"
+       style="font-size:58.6333px;fill:none;stroke:#000000;stroke-width:5.86685;stroke-dasharray:none;stroke-opacity:1"
+       x="86.424942"
+       y="149.49226"
+       id="text3259"
+       transform="scale(0.9795057,1.0209231)"
+       class="logo-text">
+       <tspan
+         sodipodi:role="line"
+         id="tspan3257"
+         style="stroke-width:5.86685;stroke-dasharray:none"
+         x="86.424942"
+         y="149.49226">Y
+         </tspan>
+      </text>
+  </g>
+</svg>

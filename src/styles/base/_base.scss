@@ -45,6 +45,9 @@ ul {
     padding: _size(button-padding);
     color: _palette(primary);
     border-radius: _misc(border-radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         background-color: _palette(accent);
@@ -58,8 +61,16 @@ ul {
     align-items: center;
     font-size: _size(icon-extra-large);
     height: 100vh;
-}
 
+
+    #loading-intro{
+        height: 30%;
+        width: 30%;
+    }
+
+    
+
+}
 
 .fade-wrapper {
     opacity: 0;
@@ -71,3 +82,17 @@ ul {
         opacity: 1;
     }
 }
+
+
+.rotate {
+    animation: spin 7s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
