@@ -1,4 +1,5 @@
 import './globals.css'
+import Script from 'next/script'
 
 
 export const metadata = {
@@ -13,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >{children}</body>
+      <Script src="scripts/pt.min.js"/>
+      <Script src="scripts/canvas.js"/>
+      <body >
+          {children}
+      </body>
     </html>
   )
 }
