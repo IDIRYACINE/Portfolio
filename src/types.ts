@@ -28,3 +28,9 @@ export type Project = {
     github: string;
     biography: string[];
   }
+
+
+  export type Mindset = {
+    title: string;
+    summary: string;
+  }

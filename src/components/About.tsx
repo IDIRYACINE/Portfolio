@@ -1,19 +1,27 @@
+'use client'
+
+import { Mindset } from "@/types";
 import AboutHexagon from "./commons/AboutHexagon";
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
 
-
-export default function Experience() {
-    const data = 'sge hello grroswwe'
+interface ExperienceProps {
+    mindsets: Mindset[]
+}
+export default function Experience({mindsets}: ExperienceProps)  {
     return (
-        <div id="About" className="w-screen h-screen p-24 flex flex-col justify-start items-center">
-            <p className="text-purple-800 text-4xl mb-4">
+        <div id="About" className="w-screen h-full p-24 flex flex-col justify-center items-center">
+            <p className="text-purple-800 text-3xl md:text-4xl mb-4 text-center">
                 About me
             </p>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 w-full">
-                <AboutHexagon data={data}/>
-                <AboutHexagon data={data}/>
-                <AboutHexagon data={data}/>
-                <AboutHexagon data={data}/>
-                <AboutHexagon data={data}/>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3 w-full justify-start items-start">
+
+                {
+                    mindsets.map((mindset, index) => {
+                        return (
+                            <AboutHexagon mindset={mindset} Icon={LightbulbIcon} key={index}/>
+                        )
+                    })
+                }
 
             </div>
         </div>

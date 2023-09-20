@@ -28,8 +28,7 @@
             "name": "Fullstack Inventory Management",
             "previewImage": "/images/test-featured-project-bg.jpg",
             "previewDescription": [
-                "A fullstack inventory management solution , backendServer , desktopApp , mobileApp .",
-                "features : workerTracking , permissionsManagement , import/export utility , cross checking physical inventory with system inventory , etc"
+                "A fullstack inventory management solution , backendServer , desktopApp , mobileApp ."
             ],
             "description": [],
             "tags": [

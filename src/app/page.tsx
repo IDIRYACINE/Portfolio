@@ -23,16 +23,24 @@ async function getProfile(){
     return profile
 }
 
+async function getAbout(){
+    const res = await fetch(`${process.env.HOST}/data/about.json`,{ cache: 'no-store' })
+    const json = await res.json() 
+
+    return json
+}
+
 export default async function Home() {
 
   const projects = await getProjects()
   const profile = await getProfile()
+  const about = await getAbout()
 
   return (
 
     <main className="flex flex-col items-center justify-center">
         <Hero />
-        <About />
+        <About mindsets={about.mindsets}/>
         <Projects projects={projects}/>
         <Contacts profile={profile}/>
     </main>

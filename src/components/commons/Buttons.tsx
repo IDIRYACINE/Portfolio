@@ -1,11 +1,12 @@
 import clsx from 'clsx'
-import dynamic from 'next/dynamic'
+import GithubIcon from '@mui/icons-material/GitHub'
+
 
 interface ButtonProps { children: React.ReactNode, onClick?: () => void, className?: string }
 export function PrimaryButtonOutlined({ children, onClick, className }: ButtonProps) {
     const compClassName = clsx(
         [
-            "text-purple-500 text-2xl border border-purple-500 p-2 hover:bg-purple-500 hover:text-white",
+            "text-purple-500 text-xl md:text-2xl border border-purple-500 p-2 hover:bg-purple-500 hover:text-white",
             className
         ]
     )
@@ -28,7 +29,7 @@ interface LinkProps {
 export function LinkOutlined({ children, href, className }: LinkProps) {
     const compClassName = clsx(
         [className,
-            "text-purple-500 text-2xl border border-purple-500 p-2 hover:bg-purple-500 hover:text-white"
+            "text-purple-500 text-xl md:text-2xl border border-purple-500 p-2 hover:bg-purple-500 hover:text-white"
         ]
     )
     return (
@@ -39,9 +40,7 @@ export function LinkOutlined({ children, href, className }: LinkProps) {
 }
 
 export function GithubLink({ href,className }: { href: string ,className?:string}) {
-    const GithubIcon = dynamic(
-        () => import('@mui/icons-material/GitHub').then(module => module),
-    )
+   
 
     const iconClassName = clsx([
         className,
