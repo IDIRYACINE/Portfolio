@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        '196' : '50rem',
+      },
      colors: {
       alternative : '#252934',
      }

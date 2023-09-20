@@ -52,3 +52,53 @@ body {
 ::-webkit-scrollbar{
   display:none;
 }
+
+.fade-in-and-move-up {
+  animation: fadeInAndMoveUp 1s ease-in-out;
+  animation-fill-mode: forwards;
+  visibility: visible;
+}
+
+@keyframes fadeInAndMoveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);    
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+
+  }
+}
+
+.fade-in-and-move-left {
+  animation: fadeInAndMoveLeft 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAndMoveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    visibility: hidden;
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+
+  }
+}
+
+.visible{
+  visibility: visible;
+}
+
+.invisible{
+  opacity: 0;
+}

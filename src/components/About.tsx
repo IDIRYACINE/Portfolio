@@ -4,7 +4,7 @@ import AboutHexagon from "./commons/AboutHexagon";
 export default function Experience() {
     const data = 'sge hello grroswwe'
     return (
-        <div className="w-screen h-screen p-24 flex flex-col justify-start items-center">
+        <div id="About" className="w-screen h-screen p-24 flex flex-col justify-start items-center">
             <p className="text-purple-800 text-4xl mb-4">
                 About me
             </p>

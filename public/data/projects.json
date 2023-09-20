@@ -18,7 +18,7 @@
             "images": [],
             "actions": [
                 {
-                    "name": "Blog",
+                    "name": "Github",
                     "icon": "fas fa-link",
                     "link": ""
                 }
@@ -84,40 +84,6 @@
                     "name": "PlayStore",
                     "icon": "fas fa-link",
                     "link": ""
-                }
-            ]
-        },
-        {
-            "name": "Progress Webetu",
-            "previewImage": "/images/test-featured-project-bg.jpg",
-            "previewDescription": ["Reverse engineered and improved the webetu app"],
-            "description": [],
-            "tags": [
-                "Flutter"
-            ],
-            "images": [],
-            "actions": [
-                {
-                    "name": "PlayStore",
-                    "icon": "fas fa-link",
-                    "link": ""
-                }
-            ]
-        },
-        {
-            "name": "Higuruma bot",
-            "previewImage": "/images/test-featured-project-bg.jpg",
-            "previewDescription": ["A discord bot for managing discussions in a discord server"],
-            "description": [],
-            "tags": [
-                "NodeJs"
-            ],
-            "images": [],
-            "actions": [
-                {
-                    "name": "Github",
-                    "icon": "brands fa-github",
-                    "link": "https://github.com/IDIRYACINE/higuruma-bot"
                 }
             ]
         }
