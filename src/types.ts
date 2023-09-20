@@ -18,3 +18,13 @@ export type Project = {
     }[];
   };
   
+
+  export type  Profile = {
+    name: string;
+    email: string;
+    secondaryEmail?: string;
+    phone?: string;
+    facebook?: string;
+    github?: string;
+    biography: string[];
+  }

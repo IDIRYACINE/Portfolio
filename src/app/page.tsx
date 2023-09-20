@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import { Project } from '@/types';
+import Contacts from '@/components/commons/Contacts';
 
 
 async function getProjects(){
@@ -14,10 +15,18 @@ async function getProjects(){
     return projects
 }
 
+async function getProfile(){
+    const res = await fetch(`${process.env.HOST}/data/profile.json`)
+    const json = await res.json() 
+    const profile =  json.profile
+
+    return profile
+}
+
 export default async function Home() {
 
   const projects = await getProjects()
-
+  const profile = await getProfile()
 
   return (
 
@@ -25,6 +34,7 @@ export default async function Home() {
         <Hero />
         <About />
         <Projects projects={projects}/>
+        <Contacts profile={profile}/>
     </main>
   )
 }
