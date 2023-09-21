@@ -34,3 +34,11 @@ export type Project = {
     title: string;
     summary: string;
   }
+
+  export type Skills = {
+    languages : string[];
+    frameworks : string[];
+    databases : string[];
+    tools : string[];
+  }
+

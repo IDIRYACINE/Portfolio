@@ -6,7 +6,7 @@ export default function Contacts({ profile }: { profile: Profile }) {
     return (
         <div id="Contacts" className="w-screen min-h-screen relative p-12 md:p-24 flex flex-col justify-evenly items-center">
             
-            <div className="absolute top-0 left-0 bg-purple-500 w-full h-10"/>
+            <div className="absolute top-0 left-0 bg-alternative w-full h-10"/>
             <div className="flex flex-col gap-4 w-full">
                 <p className="text-3xl md:text-4xl text-black font-bold">Get in touch</p>
                 <p className="text-black text-2xl md:text-3xl">

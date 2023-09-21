@@ -1,10 +1,10 @@
-import type {  GetStaticProps } from 'next'
 
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import { Project } from '@/types';
 import Contacts from '@/components/Contacts';
+import Experience from '@/components/Experience';
 
 
 async function getProjects(){
@@ -41,6 +41,7 @@ export default async function Home() {
     <main className="flex flex-col items-center justify-center">
         <Hero />
         <About mindsets={about.mindsets}/>
+        <Experience skills={about.skills}/>
         <Projects projects={projects}/>
         <Contacts profile={profile}/>
     </main>

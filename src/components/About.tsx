@@ -4,10 +4,10 @@ import { Mindset } from "@/types";
 import AboutHexagon from "./commons/AboutHexagon";
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 
-interface ExperienceProps {
+interface AboutProps {
     mindsets: Mindset[]
 }
-export default function Experience({mindsets}: ExperienceProps)  {
+export default function About({mindsets}: AboutProps)  {
     return (
         <div id="About" className="w-screen h-full p-24 flex flex-col justify-center items-center">
             <p className="text-purple-800 text-3xl md:text-4xl mb-4 text-center">

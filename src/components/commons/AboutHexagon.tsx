@@ -20,3 +20,5 @@ export default function AboutHexagon({mindset,Icon}:AboutHexagonProps){
         </div>
     )
 }
+
+

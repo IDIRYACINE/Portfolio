@@ -24,7 +24,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
             top: scrollAmount,
         })
     }
-    
+
 
 
     const nextProject = () => {
@@ -36,8 +36,8 @@ export default function Projects({ projects }: { projects: Project[] }) {
     }
 
     return (
-        <div id="Projects" className="w-screen h-full bg-alternative p-12 md:p-24 ">
-            <p className="text-white text-3xl md:text-4xl mb-8">Projects</p>
+        <div id="Projects" className="w-screen h-full p-12 md:p-24 ">
+            <p className="text-purple-500 text-3xl md:text-4xl mb-8">Projects</p>
 
             <div className="flex flex-col gap-8 mb-8" ref={divRef}>
                 {projects.map((project, index) => {
@@ -61,8 +61,10 @@ interface FeatureProjectCardProps {
 function FeaturedProjectCard({ project, nextProject, previousProject }: FeatureProjectCardProps) {
     const { ref, inView, entry } = useInView()
 
+
+
     const imageClassName = clsx([
-        "backdrop-brightness-50  ",
+        " mix-blend-luminosity",
         inView ? "fade-in-and-move-up " : null
     ])
 
@@ -73,18 +75,18 @@ function FeaturedProjectCard({ project, nextProject, previousProject }: FeatureP
 
     return (
         <div ref={ref} className="relative flex flex-row w-full h-96 " >
-            <div className="">
-                <Image className={imageClassName} fill={true} src={project.previewImage} alt={project.name} />
-            </div>
-
+            
             <div className={cardConatinterClassName}>
-                <div className="card relative w-full h-full md:w-96 md:h-96 flex flex-col justify-evenly items-start p-8 shadow-lg bg-white/75 md:bg-white  ">
-                    <p className="font-extrabold text-left text-black text-2xl md:text-3xl">{project.name}</p>
-                    <p className="text-left text-black text-lg md:text-xl">{project.previewDescription.join()}</p>
+                <div className="relative w-full h-full md:w-96 md:h-96 flex flex-col justify-evenly items-start p-8 shadow-lg bg-alternative/75 md:bg-alternative  ">
+                    <p className="font-extrabold text-left text-white text-2xl md:text-3xl">{project.name}</p>
+                    <p className="text-left text-white text-lg md:text-xl">{project.previewDescription.join()}</p>
                     <GithubLink className="text-4xl" href="#" />
                 </div>
 
+            </div>
 
+            <div className="bg-alternative md:w-full md:h-full">
+                <Image className={imageClassName} fill={true} src={project.previewImage} alt={project.name} />
             </div>
             {/* 
             <div className="w-1/2 h-full flex justify-evenly items-center">

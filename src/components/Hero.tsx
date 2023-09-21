@@ -3,7 +3,7 @@ import { LinkOutlined } from "./commons/Buttons";
 export default function Hero() {
 
     return (
-        <div className="w-screen h-screen flex flex-col justify-center items-center">
+        <div className="w-screen h-screen flex flex-col justify-center items-center bg-alternative">
             <div id="pt" className="canvas"></div>
             <div className="flex h-full flex-col justify-evenly">
                 <div>
