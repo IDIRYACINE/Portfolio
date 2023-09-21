@@ -38,7 +38,7 @@
             "C++","Dart","Java","Typescript","JavaScript","PHP","Python","Css","C#","HTML","SQL","PL/SQL"
         ],
         "frameworks" : [
-            "Flutter","React","React Native","NextJs","NodeJs","Laravel","JavaFx","MedusaJs"
+            "Flutter","React","React Native","NextJs","NodeJs","Laravel","JavaFx","MedusaJs","Jetpack"
         ],
         "databases" : [
             "MySQL","PostgreSQL","Convex","Oracle","Maria","Mongo","Firebase","Supabase","Sqlite","Redis","MqRabbit"

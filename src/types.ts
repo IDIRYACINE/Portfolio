@@ -12,10 +12,10 @@ export type Project = {
     tags: string[];
     images: string[];
     actions: {
-      name: string;
-      icon: string;
-      link: string;
-    }[];
+      github?: string;
+      website?: string;
+      playstore?: string;
+    };
   };
   
 

@@ -1,34 +1,46 @@
 {
     "projects": [
         {
-            "name": "Fullstack Ecommerce",
+            "name": "Agritech.Ai",
             "previewImage": "/images/test-featured-project-bg.jpg",
             "previewDescription": [
-                "A fullstack ecommerce solution , backendServer , desktopApp , mobileApp "
+                "A mobile and website for the first international event in the field of agriculture and technology in Algeria"
             ],
             "description": [],
             "tags": [
-                "Flutter",
-                "Mongodb",
+                "Kotlin",
                 "Firebase",
-                "NodeJs",
-                "React",
-                "Typescript"
+                "Svelte",
+                "Flutter"
             ],
             "images": [],
-            "actions": [
-                {
-                    "name": "Github",
-                    "icon": "fas fa-link",
-                    "link": ""
-                }
-            ]
+            "actions": {
+                "playstore" : "https://play.google.com/store/apps/details?id=com.idir.argitech.seminar",
+                "website": "https://agritech-seminar.vercel.app/"
+            }
+        },
+        {
+            "name": "Death Note",
+            "previewImage": "/images/test-featured-project-bg.jpg",
+            "previewDescription": [
+                "A game submission for webdevCody hacakthon . Ai and Collaborative categories"
+            ],
+            "description": [],
+            "tags": [
+                "NextJs",
+                "Convex",
+                "Ai"
+            ],
+            "images": [],
+            "actions": {
+                "github": "https://github.com/IDIRYACINE/death-note-hackathon"
+            }
         },
         {
             "name": "Fullstack Inventory Management",
             "previewImage": "/images/test-featured-project-bg.jpg",
             "previewDescription": [
-                "A fullstack inventory management solution , backendServer , desktopApp , mobileApp ."
+                "A local inventory management solution for factories . backendServer , desktopApp , mobileApp ."
             ],
             "description": [],
             "tags": [
@@ -39,52 +51,44 @@
                 "JavaFx"
             ],
             "images": [],
-            "actions": [
-                {
-                    "name": "Blog",
-                    "icon": "fas fa-link",
-                    "link": ""
-                }
-            ]
+            "actions": {
+                
+            }
         },
         {
-            "name": "QRR Scanner",
+            "name": "Dive Club",
             "previewImage": "/images/test-featured-project-bg.jpg",
-            "previewDescription": ["A mobile app for scanning qr and barcodes and posting them through a rest api. ",
-            "Various features are present like timestamps ,grouping, duplications."],
-            "description": [],
-            "tags": [
-                "Kotlin",
-                "Sqlite",
-                "JetpackCompose"
+            "previewDescription": [
+                "A platform for automating the process of swimming competitions"
             ],
-            "images": [],
-            "actions": [
-                {
-                    "name": "PlayStore",
-                    "icon": "fas fa-link",
-                    "link": ""
-                }
-            ]
-        },
-        {
-            "name": "Smart Home",
-            "previewImage": "/images/test-featured-project-bg.jpg",
-            "previewDescription": ["A google home clone linked with arduino over mqtt protocol"],
             "description": [],
             "tags": [
                 "Flutter",
-                "Arduino",
-                "Mqtt"
+                "Firebase"
             ],
             "images": [],
-            "actions": [
-                {
-                    "name": "PlayStore",
-                    "icon": "fas fa-link",
-                    "link": ""
-                }
-            ]
+            "actions": {
+                "github" : "https://github.com/IDIRYACINE/dive-club"
+            }
+        },
+        {
+            "name": "Vinstaverse",
+            "previewImage": "/images/test-featured-project-bg.jpg",
+            "previewDescription": [
+                "Ecommerce website for a local clothing shop"
+            ],
+            "description": [],
+            "tags": [
+                "Firebase",
+                "NextJs",
+                "Mui",
+                "Typescript"
+            ],
+            "images": [],
+            "actions": {
+                "website": "https://vinstastore.vercel.app/"
+            }
         }
+        
     ]
 }

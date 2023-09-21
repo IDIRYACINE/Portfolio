@@ -2,7 +2,7 @@
 
 import { Project } from "@/types";
 import Image from 'next/image'
-import { GithubLink, LinkOutlined } from "./commons/Buttons";
+import { GithubLink, LinkOutlined, PlaystoreLink, WebsiteLink } from "./commons/Buttons";
 import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
 import ArrowCircleUpOutlinedIcon from '@mui/icons-material/ArrowCircleUpOutlined';
 import { useScrollProject } from "@/hooks/useScroll";
@@ -80,7 +80,7 @@ function FeaturedProjectCard({ project, nextProject, previousProject }: FeatureP
                 <div className="relative w-full h-full md:w-96 md:h-96 flex flex-col justify-evenly items-start p-8 shadow-lg bg-alternative/75 md:bg-alternative  ">
                     <p className="font-extrabold text-left text-white text-2xl md:text-3xl">{project.name}</p>
                     <p className="text-left text-white text-lg md:text-xl">{project.previewDescription.join()}</p>
-                    <GithubLink className="text-4xl" href="#" />
+                    <ActionsList project={project}/>
                 </div>
 
             </div>
@@ -100,6 +100,40 @@ function FeaturedProjectCard({ project, nextProject, previousProject }: FeatureP
                 </button>
             </div> */}
 
+        </div>
+    )
+}
+
+
+function ActionsList({project}: {project: Project}){
+
+
+    const Gituhb = () => {
+        if(project.actions.github){
+            return <GithubLink className="text-4xl" href={project.actions.github} />
+        }
+        return null
+    }
+
+    const Website = () => {
+        if(project.actions.website){
+            return <WebsiteLink className="text-4xl" href={project.actions.website} />
+        }
+        return null
+    }
+
+    const PlayStore = () => {
+        if(project.actions.playstore){
+                return  <PlaystoreLink className="text-4xl" href={project.actions.playstore} />
+        }
+        return null
+    }
+
+    return (
+        <div className="flex flex-row justify-start gap-4">
+            <Gituhb />
+            <Website />
+            <PlayStore />
         </div>
     )
 }
