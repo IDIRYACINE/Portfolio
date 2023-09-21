@@ -52,13 +52,13 @@ interface SkillLayersProps {
 function SkillLayer({ title, skills, Icon }: SkillLayersProps) {
 
     return (
-        <div className="flex flex-col p-4 justify-start items-center ">
+        <div className="flex flex-col p-4 justify-start items-center rounded bg-white">
             <SkillHexagon title={title} Icon={Icon} className="mb-4"/>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3 w-full">
                 {
                     skills.map((skill, index) => {
                         return (
-                            <p className="text-white text-base text-bold text-center bg-purple-500" key={index}>{skill}</p>
+                            <p className="text-white text-base text-bold text-center bg-purple-600" key={index}>{skill}</p>
                         )
                     })
                 }

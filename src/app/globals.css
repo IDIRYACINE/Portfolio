@@ -94,11 +94,3 @@ body {
 
   }
 }
-
-.visible{
-  visibility: visible;
-}
-
-.invisible{
-  opacity: 0;
-}

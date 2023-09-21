@@ -3,8 +3,8 @@ import { LinkOutlined } from "./commons/Buttons";
 export default function Hero() {
 
     return (
-        <div className="w-screen h-screen flex flex-col justify-center items-center bg-alternative">
-            <div id="pt" className="canvas"></div>
+        <div id="Home" className="w-screen h-screen flex flex-col justify-center items-center ">
+            <div id="pt" className="canvas bg-alternative"></div>
             <div className="flex h-full flex-col justify-evenly">
                 <div>
                     <p className="text-4xl md:text-5xl text-white inline">Hello I&apos;m </p>

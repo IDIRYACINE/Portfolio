@@ -2,7 +2,7 @@
 
 import { Project } from "@/types";
 import Image from 'next/image'
-import { GithubLink, PrimaryButtonOutlined } from "./commons/Buttons";
+import { GithubLink, LinkOutlined } from "./commons/Buttons";
 import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
 import ArrowCircleUpOutlinedIcon from '@mui/icons-material/ArrowCircleUpOutlined';
 import { useScrollProject } from "@/hooks/useScroll";
@@ -46,7 +46,7 @@ export default function Projects({ projects }: { projects: Project[] }) {
                 }
             </div>
 
-            <PrimaryButtonOutlined className="w-full md:w-96">See all</PrimaryButtonOutlined>
+            <LinkOutlined href="https://github.com/IDIRYACINE/" className="block text-center">See all</LinkOutlined>
 
         </div>
     )
@@ -64,12 +64,12 @@ function FeaturedProjectCard({ project, nextProject, previousProject }: FeatureP
 
 
     const imageClassName = clsx([
-        " mix-blend-luminosity",
+        " ",
         inView ? "fade-in-and-move-up " : null
     ])
 
     const cardConatinterClassName = clsx([
-        "w-full md:w-1/2 h-full z-10  flex justify-center items-center ",
+        "w-full md:w-1/2 h-full z-10  flex justify-start items-center ",
         inView ? "fade-in-and-move-left " : null
     ])
 
@@ -85,7 +85,7 @@ function FeaturedProjectCard({ project, nextProject, previousProject }: FeatureP
 
             </div>
 
-            <div className="bg-alternative md:w-full md:h-full">
+            <div className="">
                 <Image className={imageClassName} fill={true} src={project.previewImage} alt={project.name} />
             </div>
             {/* 
