@@ -21,7 +21,10 @@ const nextConfig = {
         }
 
         return config
-    }
+    },
+    images: {
+        disableStaticImages: true,
+      },
 }
 
 module.exports = nextConfig

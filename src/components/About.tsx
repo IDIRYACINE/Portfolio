@@ -1,4 +1,3 @@
-'use client'
 
 import { Mindset } from "@/types";
 import AboutHexagon from "./commons/AboutHexagon";
