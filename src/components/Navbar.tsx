@@ -1,7 +1,7 @@
 'use client'
 
 import clsx from 'clsx'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from 'next/navigation';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
@@ -10,7 +10,6 @@ export default function Navbar() {
     const destiantions = ["Home", "About", "Experience", "Projects", "Contacts"]
 
     const [state, setState] = useState({
-        // visible: false,
         atTop: true,
         activeIndex: 0,
         heights: [0],
@@ -21,13 +20,19 @@ export default function Navbar() {
 
     const router = useRouter()
 
+    const navRef = useRef<HTMLDivElement>(null)
+
 
     const className = clsx([
-        "fixed top-0 left-0 w-full h-16 flex flex-row justify-center items-center z-50 transition-all duration-300",
+        "invisible fixed top-0 left-0 w-full h-16 flex flex-row justify-center items-center z-50 transition-all duration-300",
         state.atTop ? "bg-transparent" : "bg-alternative shadow-md"
     ])
 
     useEffect(() => {
+        if (navRef.current) {
+            navRef.current.classList.remove("invisible")
+            navRef.current.classList.add("animate-fadeIn")
+        }
 
         const handleScroll = () => {
 
@@ -76,10 +81,12 @@ export default function Navbar() {
     }
 
     const Content = () => {
-        if (isMobile === false) {
-            return (
-                <div className="w-96 flex flex-row justify-between items-center ">
-                    {
+
+        return (
+            <div className="w-96 flex flex-row justify-between items-center ">
+                {
+
+                    isMobile ? <button onClick={toggleSidebar}><MenuIcon className="text-4xl" /> </button> :
                         destiantions.map((destination, index) => {
                             const props = {
                                 title: destination,
@@ -88,87 +95,80 @@ export default function Navbar() {
                             }
                             return <NavItem key={`nav-item-${index}`} {...props} />
                         })
-                    }
-                </div>
-            )
-        }
+                }
+            </div>
+        )
 
+    }
 
+    const Sidebar = () => {
+        const className = clsx([
+            "fixed top-0 left-0 w-full h-screen flex flex-col justify-evenly items-center z-60 transition-all duration-300 bg-alternative",
+            isMobile ? state.sidebarOpen ? "translate-x-0 visible" : "-translate-x-full visible" : "invisible"
+        ])
         return (
-            <div className="w-96 flex flex-row justify-end items-center ">
-                    <button onClick={toggleSidebar}><MenuIcon className="text-4xl" /> </button>
+            <div className={className}>
+                {
+                    destiantions.map((destination, index) => {
+                        const props = {
+                            title: destination,
+                            active: state.activeIndex === index,
+                            handleClick: () => {
+                                router.push(`#${destination}`)
+                                toggleSidebar()
+                            }
+                        }
+                        return <MobileNavItem key={`nav-item-${index}`} {...props} />
+                    })
+                }
             </div>
         )
     }
 
-        const Sidebar = () => {
-            const className = clsx([
-                "fixed top-0 left-0 w-full h-screen flex flex-col justify-evenly items-center z-60 transition-all duration-300 bg-alternative",
-                isMobile ? state.sidebarOpen ? "translate-x-0 visible" : "-translate-x-full visible" : "invisible"
-            ])
-            return (
-                <div className={className}>
-                    {
-                        destiantions.map((destination, index) => {
-                            const props = {
-                                title: destination,
-                                active: state.activeIndex === index,
-                                handleClick: () =>  {
-                                    router.push(`#${destination}`)
-                                    toggleSidebar()
-                                }
-                            }
-                            return <MobileNavItem key={`nav-item-${index}`} {...props} />
-                        })
-                    }
-                </div>
-            )
-        }
+    return (
+        <nav ref={navRef} className={className}>
+            <Content />
+            <Sidebar />
+        </nav>
+    )
+}
 
-        return (
-            <nav className={className}>
-                <Content />
-                <Sidebar/>
-            </nav>
-        )
-    }
+interface NavItemProps {
+    title: string
+    href: string
+    active?: boolean
+}
+function NavItem({ title, href, active }: NavItemProps) {
 
-    interface NavItemProps {
-        title: string
-        href: string
-        active?: boolean
-    }
-    function NavItem({ title, href, active }: NavItemProps) {
+    const className = clsx([
+        "text-base hover:text-purple-500 transition-colors duration-300",
+        active ? "text-purple-500" : "text-white",
+    ])
 
-        const className = clsx([
-            "text-base hover:text-purple-500 transition-colors duration-300",
-            active ? "text-purple-500" : "text-white",
-        ])
-
-        return (
-            <a className={className} href={href}>
-                {title}
-            </a>
-        )
-    }
+    return (
+        <a className={className} href={href}>
+            {title}
+        </a>
+    )
+}
 
 
 
-    interface MobileNavItemProps {
-        title: string
-        active?: boolean
-        handleClick: () => void
-    }
-    function MobileNavItem({ title,  active,handleClick }: MobileNavItemProps) {
+interface MobileNavItemProps {
+    title: string
+    active?: boolean
+    handleClick: () => void
+}
+function MobileNavItem({ title, active, handleClick }: MobileNavItemProps) {
 
-        const className = clsx([
-            "text-3xl hover:text-purple-500 transition-colors duration-300",
-            active ? "text-purple-500" : "text-white",
-        ])
+    const className = clsx([
+        "text-3xl hover:text-purple-500 transition-colors duration-300",
+        active ? "text-purple-500" : "text-white",
+    ])
 
-        return (
-            <button className={className} onClick={handleClick}>
-                {title}
-            </button>
-        )
-    }
+    return (
+        <button className={className} onClick={handleClick}>
+            {title}
+        </button>
+    )
+}

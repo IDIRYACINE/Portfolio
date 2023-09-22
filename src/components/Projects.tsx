@@ -59,24 +59,31 @@ interface FeatureProjectCardProps {
     previousProject: () => void
 }
 function FeaturedProjectCard({ project, nextProject, previousProject }: FeatureProjectCardProps) {
-    const { ref, inView, entry } = useInView()
+    const imgRef = useRef<HTMLImageElement>(null)
+    const cardRef = useRef<HTMLDivElement>(null)
+
+    const onFirstVisible = (inView:boolean,entry:IntersectionObserverEntry) => {
+        if(inView){
+            imgRef.current?.classList.add("fade-in-and-move-up")
+            cardRef.current?.classList.add("fade-in-and-move-left")
+            
+        }
+    }
+    
+    const { ref } = useInView({triggerOnce: true,onChange:onFirstVisible,})
 
 
 
-    const imageClassName = clsx([
-        " ",
-        inView ? "fade-in-and-move-up " : null
-    ])
 
     const cardConatinterClassName = clsx([
         "w-full md:w-1/2 h-full z-10  flex justify-start items-center ",
-        inView ? "fade-in-and-move-left " : null
     ])
+
 
     return (
         <div ref={ref} className="relative flex flex-row w-full h-96 " >
             
-            <div className={cardConatinterClassName}>
+            <div ref={cardRef} className={cardConatinterClassName}>
                 <div className="relative w-full h-full md:w-96 md:h-96 flex flex-col justify-evenly items-start p-8 shadow-lg bg-alternative/75 md:bg-alternative  ">
                     <p className="font-extrabold text-left text-white text-2xl md:text-3xl">{project.name}</p>
                     <p className="text-left text-white text-lg md:text-xl">{project.previewDescription.join()}</p>
@@ -85,8 +92,8 @@ function FeaturedProjectCard({ project, nextProject, previousProject }: FeatureP
 
             </div>
 
-            <div className="">
-                <Image className={imageClassName} fill={true} src={project.previewImage} alt={project.name} />
+            <div  >
+                <Image  ref={imgRef} fill={true} src={project.previewImage} alt={project.name} />
             </div>
             {/* 
             <div className="w-1/2 h-full flex justify-evenly items-center">

@@ -10,13 +10,22 @@ const config: Config = {
   theme: {
     extend: {
       height: {
-        '196' : '50rem',
+        '196': '50rem',
       },
-     colors: {
-      alternative : '#252934',
-     }
+      colors: {
+        alternative: '#252934',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        }
+      },
+      animation: {
+        fadeIn: 'fadeIn 1s ease-in-out',
+      }
     },
   },
-  plugins: [],
-}
+    plugins: [],
+  }
 export default config
