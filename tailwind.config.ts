@@ -12,6 +12,9 @@ const config: Config = {
       height: {
         '196': '50rem',
       },
+      width :{
+        '196': '50rem'
+      },
       colors: {
         alternative: '#252934',
       },

@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
 
 export default function Navbar() {
-    const destiantions = ["Home", "About", "Experience", "Projects", "Contacts"]
+    const destiantions = ["Home", "About", "Experience", "Projects", "Contacts", "Resume"]
 
     const [state, setState] = useState({
         atTop: true,
@@ -83,14 +83,15 @@ export default function Navbar() {
     const Content = () => {
 
         return (
-            <div className="w-96 flex flex-row justify-between items-center ">
+            <div className="w-196 flex flex-row justify-between items-center ">
                 {
 
                     isMobile ? <button onClick={toggleSidebar}><MenuIcon className="text-4xl" /> </button> :
                         destiantions.map((destination, index) => {
+                            const href = destination !== "Resume" ? `#${destination}` : "/Resume.pdf"
                             const props = {
                                 title: destination,
-                                href: `#${destination}`,
+                                href,
                                 active: state.activeIndex === index,
                             }
                             return <NavItem key={`nav-item-${index}`} {...props} />
@@ -110,11 +111,13 @@ export default function Navbar() {
             <div className={className}>
                 {
                     destiantions.map((destination, index) => {
+                        const href = destination !== "Resume" ? `#${destination}` : "/Resume.pdf"
+
                         const props = {
                             title: destination,
                             active: state.activeIndex === index,
                             handleClick: () => {
-                                router.push(`#${destination}`)
+                                router.push(href)
                                 toggleSidebar()
                             }
                         }
