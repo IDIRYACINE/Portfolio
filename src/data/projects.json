@@ -1,14 +1,61 @@
 {
     "projects": [
         {
-            "name": "Agritech.Ai",
+            "name": "OiluCode",
             "previewImage": "/images/test-featured-project-bg.jpg",
             "previewDescription": [
-                "A mobile and website for the first international event in the field of agriculture and technology in Algeria"
+                "An inovative homography-less marker achieving a 2~10ms benchmark.Registered under US patent application No: 63/199-424, 2020"
             ],
             "description": [],
             "tags": [
-                "Kotlin",
+                "C++",
+                "Research",
+                "Computer Vision"
+            ],
+            "images": [],
+            "actions": {
+                "github": "https://github.com/OiluProject/OiluTag"
+            }
+        },
+        {
+            "name": "AnFashion",
+            "previewImage": "/images/test-featured-project-bg.jpg",
+            "previewDescription": [
+                "A national algerian clothings franchise"
+            ],
+            "description": [],
+            "tags": [
+                "ECommerce"
+            ],
+            "images": [],
+            "actions": {
+                "github": "https://www.anfashion.dz"
+            }
+        },
+        {
+            "name": "Dive Club",
+            "previewImage": "/images/test-featured-project-bg.jpg",
+            "previewDescription": [
+                "A softaware automating regional swimming competitions,sponsored by the state regional swimming league"
+            ],
+            "description": [],
+            "tags": [
+                "Flutter",
+                "Firebase"
+            ],
+            "images": [],
+            "actions": {
+                "github" : "https://github.com/IDIRYACINE/dive-club"
+            }
+        },
+        {
+            "name": "Agritech.Ai",
+            "previewImage": "/images/test-featured-project-bg.jpg",
+            "previewDescription": [
+                "A mobile and website for the first international seminar in the field of agriculture and technology in Algeria"
+            ],
+            "description": [],
+            "tags": [
                 "Firebase",
                 "Svelte",
                 "Flutter"
@@ -17,23 +64,6 @@
             "actions": {
                 "playstore" : "https://play.google.com/store/apps/details?id=com.idir.argitech.seminar",
                 "website": "https://agritech-seminar.vercel.app/"
-            }
-        },
-        {
-            "name": "Death Note",
-            "previewImage": "/images/test-featured-project-bg.jpg",
-            "previewDescription": [
-                "A game submission for webdevCody hacakthon . Ai and Collaborative categories"
-            ],
-            "description": [],
-            "tags": [
-                "NextJs",
-                "Convex",
-                "Ai"
-            ],
-            "images": [],
-            "actions": {
-                "github": "https://github.com/IDIRYACINE/death-note-hackathon"
             }
         },
         {
@@ -53,22 +83,6 @@
             "images": [],
             "actions": {
                 
-            }
-        },
-        {
-            "name": "Dive Club",
-            "previewImage": "/images/test-featured-project-bg.jpg",
-            "previewDescription": [
-                "A platform for automating the process of swimming competitions"
-            ],
-            "description": [],
-            "tags": [
-                "Flutter",
-                "Firebase"
-            ],
-            "images": [],
-            "actions": {
-                "github" : "https://github.com/IDIRYACINE/dive-club"
             }
         },
         {
