@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { useState, useEffect, useRef } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from 'next/navigation';
-import useMediaQuery from '@mui/material/useMediaQuery/useMediaQuery';
+import { useMediaQuery } from '@mui/material';
 
 export default function Navbar() {
     const destiantions = ["Home", "About", "Experience", "Projects", "Contacts", "Resume"]

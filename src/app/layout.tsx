@@ -16,6 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <Script src="scripts/pt.min.js"/>
       <Script src="scripts/canvas.js"/>
+      
       <body >
           {children}
       </body>
