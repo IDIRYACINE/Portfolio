@@ -14,7 +14,7 @@ export default function Hero() {
                     </div>
 
                     <div>
-                        <p className="text-2xl md:text-3xl text-white block">I&apos;m an Archbishop developer</p>
+                        <p className="text-2xl md:text-3xl text-white block">I&apos;m an Archmage developer</p>
                         <p className="text-2xl md:text-3xl text-white block">Frontend Backend UI/UX </p>
                         <p className="text-2xl md:text-3xl text-white block"> Databases System Deisgn </p>
                     </div>
